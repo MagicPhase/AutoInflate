@@ -16,3 +16,16 @@ This section outlines the necessary 3D-printed pieces to make to assemble a comp
 | **EStop Button** | ![ESTOP_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/de68856c-0f21-4f2a-8909-5ee8ffa0c439) | This is the EStop button that rests on the EStop switch on the PCB. It protrudes through the PCB with 4 guide pins. These pins are <2mm in diamater. This part could possibly be filament printed, ***however***, due to filament prints having ridges, this might make the guide pins rub and stick to the PCB and interfere with the button press. Because of this, it's recommended this part be printed in a non-brittle red-colored resin.|
 | **EStop Light Pipe** *Optional*| ![EStop_Light_Pipe_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/0eb6573c-6805-4a6a-8057-f39b7f6dbb7c) | This light pipe is an optional part that transfers the red EStop light from the PCB to the top of the enclosure. During testing, however, the light also illuminates the EStop button itself and may not be required. Because of its size, this needs to be resin printed in any clear or white resin.|
 | **Indicator Light Pipe** | ![INDICATOR_LIGHT_PIPE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/652ea873-5c42-4cdb-b142-00a91793a03c) | This part is cosmetic and transfers the light from the two RGB LEDs on the top part of the enclosure. This can be printed in resin and possibly filament in either clear or white.|
+
+# Pressure Sensor Manifold Options
+One of the two options ***must*** be decided before finishing a BOM list.
+
+| Part             | 3D model       | Unit example | Description/Note  |
+| :---             | :---:          | :---:        | :---              |
+| **Manifold Cap** |![MANIFOLD_V0 4_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/f9f95ea1-2fd5-4d0a-b8c6-5757df42e120)|![MANIFOLD_V0 4_ASSEMBLE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/b413e2d8-b140-45f0-bf00-3f64f117314f)|This manifold is required for the [MS583702BA01](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS583702BA01-50/6221400) sensor. This manifold is intended to cover the SMD sensor itself and sealed to the PCB with an O-Ring and M2 screws and nuts. This manifold also connects the pump, solenoid, and port.|
+| **Manifold 4-Way** | ![MANIFOLD_4_WAY_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/484898ce-6ed4-4527-8fa8-7a428d7e92e0) | ![MANIFOLD_4_WAY_ASSEMBLE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/238ff739-f243-43c3-a7cd-1490cadaa3b3) | This manifold is required for the MPS20N0040D/HX710B pressure sensor assembly. This is a cheaper alternative and can be found on Amazon for a few dollars. This manifold is a 4-way that connects the pump, solenoid, sensor, and port. It is secured with M2 screws.|
+
+
+
+
+
