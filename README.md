@@ -6,7 +6,7 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 
 
 # Enclosure Hardware
-This section outlines the necessary 3D-printed pieces to make to assemble a completed unit. Before printing these parts at home or purchasing from a printing service it's important to note that some parts require specific resin types to ensure proper function.
+This section outlines the necessary 3D-printed pieces to make and assemble a completed unit. Before printing these parts at home or purchasing from a printing service it's important to note that some parts require specific resin types to ensure proper function.
 
 | Part             | 3D model       | Description/Note  |
 | :---             | :---:          | :---             |
