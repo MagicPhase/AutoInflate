@@ -52,6 +52,8 @@ List of fasting hardware required for the enclosure and manifold options.
 | M3-0.5 x 8mm (1)   | ![M3-0 5 8mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/9ec25096-e2d5-4612-aedf-9edddbc4f25f) | One 8mm screw is required on the back side of the enclosure. |
 | M3-0.5 x 12mm (4) | ![M3-0 5 12mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/b7434ac2-69cb-4da4-9904-122c83b4fa50) | Four 12mm screws are required on the front side of the enclosure. |
 | M2-0.4 x 4mm (4)<br> M2 washer (4) |![M2 nut](https://github.com/MagicPhase/AutoInflate/assets/104283546/107511ed-3c46-4214-99b3-343f208bb923) ![M2 washer](https://github.com/MagicPhase/AutoInflate/assets/104283546/ecf58bc1-0e85-4aaf-bc97-3dca590a8f39)| These are the mounting screws and washer for the motor mount. |
+| 2mm x 22mm (2) Stainless Steal Pins |  ![pin](https://github.com/MagicPhase/AutoInflate/assets/104283546/6bc31e0a-819d-4b32-8f6f-acaa7fb78a43) | Two stainless steal strap pins for the top enclosure. These are optional in case you want to use 15mm straps. The pins should be between 22-25mm in length. [Amazon](https://www.amazon.com/dp/B07M63LPFD?ref=ppx_yo2ov_dt_b_product_details&th=1)|
+
 <br>
 <br>
 
