@@ -6,6 +6,9 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 
 
 # Enclosure Hardware
+
+## -3D Printed Parts-
+
 This section outlines the necessary 3D-printed pieces to make and assemble a completed unit. Before printing these parts at home or purchasing from a printing service it's important to note that some parts require specific resin types to ensure proper function.
 
 | Part             | 3D model       | Description/Note  |
@@ -17,7 +20,7 @@ This section outlines the necessary 3D-printed pieces to make and assemble a com
 | **EStop Light Pipe** *Optional*| ![EStop_Light_Pipe_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/0eb6573c-6805-4a6a-8057-f39b7f6dbb7c) | This light pipe is an optional part that transfers the red EStop light from the PCB to the top of the enclosure. During testing, however, the light also illuminates the EStop button itself and may not be required. Because of its size, this needs to be resin printed in any clear or white resin. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/ESTOP%20LightPipe.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/ESTOP%20LightPipe.stl)|
 | **Indicator Light Pipe** | ![INDICATOR_LIGHT_PIPE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/652ea873-5c42-4cdb-b142-00a91793a03c) | This part is cosmetic and transfers the light from the two RGB LEDs on the top part of the enclosure. This can be printed in resin and possibly filament in either clear or white. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/LIGHT%20PIPE.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/LIGHT%20PIPE.stl)|
 
-# Pressure Sensor Manifold Options
+## -Pressure Sensor Manifold Options-
 One of the two options ***must*** be decided before finishing a BOM list.
 
 | Part             | 3D model       | Unit example | Description/Note  |
