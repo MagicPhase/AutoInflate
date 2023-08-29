@@ -26,13 +26,58 @@ One of the two options ***must*** be decided before finishing a BOM list.
 | Part             | 3D model       | Unit example | Description/Note  |
 | :---             | :---:          | :---:        | :---              |
 | **Manifold Cap** |![MANIFOLD_V0 4_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/f9f95ea1-2fd5-4d0a-b8c6-5757df42e120)|![MANIFOLD_V0 4_ASSEMBLE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/b413e2d8-b140-45f0-bf00-3f64f117314f)|This manifold is required for the [MS583702BA01](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS583702BA01-50/6221400) sensor. It's intended to cover the SMD sensor itself and sealed to the PCB with an O-Ring and M2 screws and nuts. It connects the pump, solenoid, and port, and requires a quality resin print to ensure an air-tight seal around the O-Ring and PCB. I recommend [Siraya Tech Fast ABS-Like](https://siraya.tech/products/fast-abs-like) or equivalent. Current version is V0.5. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/Air%20Manifold%20V0.5.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/Air%20Manifold%20V0.5.stl)|
-| **Manifold 4-Way** | ![MANIFOLD_4_WAY_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/484898ce-6ed4-4527-8fa8-7a428d7e92e0) | ![MANIFOLD_4_WAY_ASSEMBLE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/238ff739-f243-43c3-a7cd-1490cadaa3b3) | This manifold is required for the MPS20N0040D/HX710B pressure sensor assembly. This is a cheaper alternative and can be found on Amazon for a few dollars. This manifold is a 4-way that connects the pump, solenoid, sensor, and port, and requires a quality resin print is ensure an air-tight seal around the ports. I recommened [Siraya Tech Fast ABS-Like](https://siraya.tech/products/fast-abs-like) or equivalent.  It is secured with M2 screws. Current version is V0.2. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/Air%20Manifold%20V0.2.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/Air%20Manifold%20V0.2.stl) |
+| **Manifold 4-Way** | ![MANIFOLD_4_WAY_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/484898ce-6ed4-4527-8fa8-7a428d7e92e0) | ![MANIFOLD_4_WAY_ASSEMBLE_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/238ff739-f243-43c3-a7cd-1490cadaa3b3) | This manifold is required for the MPS20N0040D/HX710B pressure sensor assembly. This is a cheaper alternative and can be found on Amazon for a few dollars. This manifold is a 4-way that connects the pump, solenoid, sensor, and port and requires a quality resin print is ensure an air-tight seal around the ports. I recommened [Siraya Tech Fast ABS-Like](https://siraya.tech/products/fast-abs-like) or equivalent.  It is secured with M2 screws. Current version is V0.2. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/Air%20Manifold%20V0.2.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/Air%20Manifold%20V0.2.stl) |
+<br>
+<br>
+
+
+## -Fasterns and Metal Parts-
+List of fasting hardware required for the enclosure and manifold options.
+
+| Part             | PICTURE       | Description/Note  |
+| :---             | :---:          | :---             |
+| M3-0.5 x 8mm (1)   | ![M3-0 5 8mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/9ec25096-e2d5-4612-aedf-9edddbc4f25f) | One 8mm screw is required on the back side of the enclosure. |
+| M3-0.5 x 12mm (4) | ![M3-0 5 12mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/b7434ac2-69cb-4da4-9904-122c83b4fa50) | Four 12mm screws are required on the front side of the enclosure. |
+| M2-0.4 x 4mm (4)<br> M2 washer (4) |![M2 nut](https://github.com/MagicPhase/AutoInflate/assets/104283546/107511ed-3c46-4214-99b3-343f208bb923) ![M2 washer](https://github.com/MagicPhase/AutoInflate/assets/104283546/ecf58bc1-0e85-4aaf-bc97-3dca590a8f39)| These are the mounting screws and washer for the motor mount. |
+<br>
+<br>
+
+
+### -Manifold Mounting Hardware-
+Use the specific mounting hardware for the manifold you choose. 
+
+| Part             | PICTURE       | Description/Note  |
+| :---             | :---:          | :---             |
+| -Option 1- | ![Manifold_V0 4_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/2a7fc812-c17a-42ac-9ba4-137f84a71f63) | Manifold Cap option.|
+| M2-0.4 x 12mm (2) | ![M2-0 4 12mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/f8c1e0de-5a4b-4cc7-a038-dd82ce11b413) | Two 12mm screws. |
+| M2 nut (2)        | ![M2 nut](https://github.com/MagicPhase/AutoInflate/assets/104283546/9619b261-d3ff-42e5-84e2-6e4420bcda9c) | Two M2 nuts.|
+| O-ring (1)  | ![O-Ring](https://github.com/MagicPhase/AutoInflate/assets/104283546/fd6179c5-c828-4c0a-bf85-042a747fd8f2) | One O-ring to seal against the PCB. This part needs to be 9mm(OD) x 5mm(ID) x 2mm. Note that 4.8mm(ID) O-rings will also work.|
+|-|-|-|
+| -Option 2-| ![Manifold_V0 2_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/04f5955a-7ff2-4f55-bc45-49022a37b31f) | 4-way manifold option.|
+| M2-0.4 x 4mm (2) | ![M2-0 4 4mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/ac8e277d-f9f1-4083-a293-973c60f51946) | Two screws are needed to secure the manifold to the PCB.|
+
 
 # PCB
 Main and Display PCBs. Follow the included link for all current PCB files. [PCB FILES](https://github.com/MagicPhase/AutoInflate/tree/main/PCB)
 | Part             | 3D model       | Description/Note  |
 | :---             | :---:          | :---             |
 | **PCB** | ![PCB_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/d27e5f5a-12c1-4c1c-afe0-6579e63293ef) | The provided gerber files contain both the MAIN and DISPLAY PCBs. This PCB is made as one piece and separated during assembly. Current version is V0.3. [PCB FILES](https://github.com/MagicPhase/AutoInflate/tree/main/PCB), [Schematic](https://github.com/MagicPhase/AutoInflate/blob/main/PCB/AutoInflate_V0.3_Shematic.png)|
+
+# Electrical Components 
+Internal Electrical components.
+| Part             | 3D model       | Description/Note  |
+| :---             | :---:          | :---             |
+| Air Pump| ![Screenshot 2023-08-29 025552](https://github.com/MagicPhase/AutoInflate/assets/104283546/43ace646-b905-4654-8e0b-10e303b2befa) | Commonly called a "370 Pump" or "Mitsumi R-14 A213" is a 6V rated micro air pump. <br> Picture is from an eBay listing. [eBay](https://www.ebay.com/itm/191898244021) |
+| Solenoid Valve Normally Open<br>PND-05A-06 or equivilent | ![Screenshot 2023-08-29 030431](https://github.com/MagicPhase/AutoInflate/assets/104283546/e5938856-f6de-4264-a35b-45d73f8a2967) | Common 5-6V rated N/O solenoid valve. It's very important to use an N/O (Normally Open) valve to ensure safe operation. There are mounting holes on the PCB for a genuine PND-05A-06, but an equivalent can be used with zip-ties. This part should measure approximately 20mm x 15mm x 13mm and have a port with 3-4mm(OD). Sub-miniature 3V valves are NOT suitable! Picture is from an eBay listing. [eBay](https://www.ebay.com/itm/262483459557) Also listed as TDS-V05B 6V.|
+| SSD1306 OLED 128 x 64| ![Screenshot 2023-08-29 031603](https://github.com/MagicPhase/AutoInflate/assets/104283546/55fa3193-4ed8-4bba-83d8-1df22b331a4d) | Common 0.96" SSD1306 OLED screen. The Display PCB can configured for either V/G/SCL/SDA or G/V/SCL/SDA depending on which model you get. Picture from [electronicwings.com](https://www.electronicwings.com/sensors-modules/ssd1306-oled-display). |
+
+# Non-Electrical Components 
+Internal and external components.
+| Part             | 3D model       | Description/Note  |
+| :---             | :---:          | :---             |
+|
+
+
 
 
 
