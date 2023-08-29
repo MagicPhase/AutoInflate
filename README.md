@@ -9,8 +9,8 @@ Please read through these hardware sections before considering a BOM.<br>
 ---
 [3D Printed Parts](https://github.com/MagicPhase/AutoInflate#enclosure-hardware)<br>
 [Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate#-pressure-sensor-manifold-options-)<br>
-[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate#-fasterns-and-metal-parts-)<br>
 [Manifold Mounting Hardware](https://github.com/MagicPhase/AutoInflate#-manifold-mounting-hardware-)<br>
+[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate#-fasterns-and-metal-parts-)<br>
 [PCB](https://github.com/MagicPhase/AutoInflate#pcb)<br>
 [Electrical Components](https://github.com/MagicPhase/AutoInflate#electrical-components)<br>
 [Non-Electrical Components](https://github.com/MagicPhase/AutoInflate#non-electrical-components)<br>
