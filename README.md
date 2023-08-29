@@ -70,12 +70,18 @@ Internal Electrical components.
 | Air Pump| ![Screenshot 2023-08-29 025552](https://github.com/MagicPhase/AutoInflate/assets/104283546/43ace646-b905-4654-8e0b-10e303b2befa) | Commonly called a "370 Pump" or "Mitsumi R-14 A213" is a 6V rated micro air pump. <br> Picture is from an eBay listing. [eBay](https://www.ebay.com/itm/191898244021) |
 | Solenoid Valve Normally Open<br>PND-05A-06 or equivilent | ![Screenshot 2023-08-29 030431](https://github.com/MagicPhase/AutoInflate/assets/104283546/e5938856-f6de-4264-a35b-45d73f8a2967) | Common 5-6V rated N/O solenoid valve. It's very important to use an N/O (Normally Open) valve to ensure safe operation. There are mounting holes on the PCB for a genuine PND-05A-06, but an equivalent can be used with zip-ties. This part should measure approximately 20mm x 15mm x 13mm and have a port with 3-4mm(OD). Sub-miniature 3V valves are NOT suitable! Picture is from an eBay listing. [eBay](https://www.ebay.com/itm/262483459557) Also listed as TDS-V05B 6V.|
 | SSD1306 OLED 128 x 64| ![Screenshot 2023-08-29 031603](https://github.com/MagicPhase/AutoInflate/assets/104283546/55fa3193-4ed8-4bba-83d8-1df22b331a4d) | Common 0.96" SSD1306 OLED screen. The Display PCB can configured for either V/G/SCL/SDA or G/V/SCL/SDA depending on which model you get. Picture from [electronicwings.com](https://www.electronicwings.com/sensors-modules/ssd1306-oled-display). |
+| 12pin 0.5mm x 100mm flex ribbon cable | ![Flex Ribbon](https://github.com/MagicPhase/AutoInflate/assets/104283546/6a4a645d-6d9b-4e48-ab68-c3a1fd3003c3) | Standard 12pin 0.5mm pitch x 100mm length flex ribbon cable. These are common and can be ordered from Amazon as a "Cable Replacement for PS4" or other controllers. This cable is the link between the main and display PCBs. Picture from [Amazon](https://www.amazon.com/gp/product/B08MVZW6QC/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).|
+
+
 
 # Non-Electrical Components 
 Internal and external components.
 | Part             | 3D model       | Description/Note  |
 | :---             | :---:          | :---             |
-|
+| Encoder Knob |  ![Knob](https://github.com/MagicPhase/AutoInflate/assets/104283546/485e20a5-9f2b-4d65-b993-c4b63e51280d) | Standard 1/4"(6mm) shaft knob. The knobs I chose are 17mm(d) x 16mm(h) knurled aluminum. The enclosure space allows for approximately 17mm in diameter. These are the specific ones I used. [Amazon](https://www.amazon.com/dp/B07TXYBB7Z?psc=1&ref=ppx_yo2ov_dt_b_product_details) |
+|Silicon Tubing| ![Tubing](https://github.com/MagicPhase/AutoInflate/assets/104283546/37cace1d-8367-45c0-a4da-795b046fdf4e)| *Two different sizes are needed.* For the best fit on the pump and port air lines, use 1/8"(3mm)ID tubing. 1/4"(6mm)OD is recommended but thinner can be used if you take precautions to not kink the lines around corners. For the solenoid valve, a smaller tubing of 2mm(ID) x 4mm(OD) fits best. Both manifolds are sized to fit the different sizes. Picture from [Amazon](https://www.amazon.com/gp/product/B07V5T31MF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)|
+
+
 
 
 
