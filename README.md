@@ -4,6 +4,19 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 
 ![MAIN_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94)
 
+Please read through these hardware sections before considering a BOM.<br>
+
+---
+[3D Printed Parts](https://github.com/MagicPhase/AutoInflate#enclosure-hardware)<br>
+[Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate#-pressure-sensor-manifold-options-)<br>
+[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate#-fasterns-and-metal-parts-)<br>
+[Manifold Mounting Hardware](https://github.com/MagicPhase/AutoInflate#-manifold-mounting-hardware-)<br>
+[PCB](https://github.com/MagicPhase/AutoInflate#pcb)<br>
+[Electrical Components](https://github.com/MagicPhase/AutoInflate#electrical-components)<br>
+[Non-Electrical Components](https://github.com/MagicPhase/AutoInflate#non-electrical-components)<br>
+
+---
+
 
 # Enclosure Hardware
 
@@ -48,12 +61,12 @@ Use the specific mounting hardware for the manifold you choose.
 
 | Part             | PICTURE       | Description/Note  |
 | :---             | :---:          | :---             |
-| -Option 1- | ![Manifold_V0 4_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/2a7fc812-c17a-42ac-9ba4-137f84a71f63) | Manifold Cap option.|
+| -Option 1- | ![Manifold_V0 4_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/2a7fc812-c17a-42ac-9ba4-137f84a71f63) | Manifold Cap option. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/Air%20Manifold%20V0.5.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/Air%20Manifold%20V0.5.stl)|
 | M2-0.4 x 12mm (2) | ![M2-0 4 12mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/f8c1e0de-5a4b-4cc7-a038-dd82ce11b413) | Two 12mm screws. |
 | M2 nut (2)        | ![M2 nut](https://github.com/MagicPhase/AutoInflate/assets/104283546/9619b261-d3ff-42e5-84e2-6e4420bcda9c) | Two M2 nuts.|
 | O-ring (1)  | ![O-Ring](https://github.com/MagicPhase/AutoInflate/assets/104283546/fd6179c5-c828-4c0a-bf85-042a747fd8f2) | One O-ring to seal against the PCB. This part needs to be 9mm(OD) x 5mm(ID) x 2mm. Note that 4.8mm(ID) O-rings will also work.|
 |-|-|-|
-| -Option 2-| ![Manifold_V0 2_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/04f5955a-7ff2-4f55-bc45-49022a37b31f) | 4-way manifold option.|
+| -Option 2-| ![Manifold_V0 2_example](https://github.com/MagicPhase/AutoInflate/assets/104283546/04f5955a-7ff2-4f55-bc45-49022a37b31f) | 4-way manifold option. [OBJ](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/OBJ/Air%20Manifold%20V0.2.obj), [STL](https://github.com/MagicPhase/AutoInflate/blob/main/3D%20FILES/STL/Air%20Manifold%20V0.2.stl)|
 | M2-0.4 x 4mm (2) | ![M2-0 4 4mm](https://github.com/MagicPhase/AutoInflate/assets/104283546/ac8e277d-f9f1-4083-a293-973c60f51946) | Two screws are needed to secure the manifold to the PCB.|
 
 
