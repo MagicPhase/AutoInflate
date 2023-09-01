@@ -7,12 +7,12 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 ---
 
 Please read through these hardware sections before considering a BOM.<br>
-[3D Printed Parts](https://github.com/MagicPhase/AutoInflate#enclosure-hardware)<br>
-[Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate#-pressure-sensor-manifold-options-)<br>
-[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate#-fasterns-and-metal-parts-)<br>
-[PCB](https://github.com/MagicPhase/AutoInflate#pcb)<br>
-[Electrical Components](https://github.com/MagicPhase/AutoInflate#electrical-components)<br>
-[Non-Electrical Components](https://github.com/MagicPhase/AutoInflate#non-electrical-components)<br>
+[3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-)<br>
+[Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-)<br>
+[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-)<br>
+[PCB](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#pcb)<br>
+[Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#electrical-components)<br>
+[Non-Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#non-electrical-components)<br>
 
 ---
 
