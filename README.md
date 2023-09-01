@@ -5,8 +5,7 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 ![MAIN_Small](https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94)
 
 ---
-
-Please read through these hardware sections before considering a BOM.<br>
+## Please read through these hardware sections before considering a BOM.
 [3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-)<br>
 [Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-)<br>
 [Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-)<br>
