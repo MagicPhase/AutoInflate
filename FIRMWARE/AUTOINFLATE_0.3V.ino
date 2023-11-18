@@ -12,7 +12,7 @@ BY Tevian Busselle
 All variables including pressures, settings, and times are converted from the (encoderInput) counter. This has the effect of limiting the divisions of certain
 variables like pressure and pump speeds. For instance, while the pump PWM has a value from 0-1023, this would require the encoder to be turned too many times
 to achieve the max value. The division of the PWM speed is dictated by the number of pixels in the display graph. This is handled via the map function to
-convert 0-1023 steps into 51 pixel steps. The mapped number is stored for use while the displayed value/graph is converted from that stored number. 
+convert 0-1023 steps into 51 pixel steps. The raw PWM number is stored for use while the displayed value/graph is converted from that stored number. 
 
 While the displayed pressures are in PSI, the stored pressure values are in (mBar * 100). Example: The default stored value for the maximum "selectable" 
 pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). The ABSOLUTE MAXIMUM SYSTEM PRESSURE is set by limiting the 
