@@ -265,7 +265,7 @@ void setup(void)
   analogReadResolution(12);//FOR READING BATTERY LEVEL
   
   preferences.begin("DATAStore", false);
-  airSys.freq = preferences.getUInt("AIRS_freq", 5000);
+  airSys.freq = preferences.getUInt("AIRS_freq", 5000);//Load default for PWM functions before starting.
   preferences.end();
 
   ledcSetup(pumpChannel, airSys.freq, resolution);
