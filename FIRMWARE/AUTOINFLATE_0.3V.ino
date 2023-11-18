@@ -261,6 +261,7 @@ void setup(void)
   sensor.setFluidDensity(997);  // Set the fluid density for pressure calculations
   sensor.init();
   sensor.read();
+  
   analogReadResolution(12);//FOR READING BATTERY LEVEL
   
   preferences.begin("DATAStore", false);
