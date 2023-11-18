@@ -1493,7 +1493,7 @@ void encoderConstain()
   encoderInput = constrain(encoderInput, encoderConstrainValMin, encoderConstrainValMax);
 }
 
-void storedData(byte PG, byte RW)//pageNumber, element, read/write
+void storedData(byte PG, byte RW)//pageNumber, read/write
 {
   preferences.begin("DATAStore", false);
   switch (PG)
