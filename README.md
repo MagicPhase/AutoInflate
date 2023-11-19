@@ -14,3 +14,9 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 [Non-Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#non-electrical-components)<br>
 
 ---
+
+The basic firmware is now available. All the basic functionality is working such as inflation times and pressures. This is achieved using two options, HUG, and PROFILE inflation cycles. Please read through the header notes for more information. Tap to activate and wireless functions are not coded yet. These menu items are currently blank.
+
+[0.3v FIRMWARE](https://github.com/MagicPhase/AutoInflate/blob/main/FIRMWARE/AUTOINFLATE_0.3V.ino)<br>
+<br>
+![DEMO](https://github.com/MagicPhase/AutoInflate/assets/104283546/e631f598-9e06-46ab-bd32-c288fff6a32b)
