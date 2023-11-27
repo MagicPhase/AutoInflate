@@ -3,6 +3,7 @@ An automated device for inflation-style sensory and anxiety vests. This GitHub c
 
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=50% height=50%>
+
 ---
 
 ## Please read through these hardware sections before considering a BOM.
