@@ -6,6 +6,18 @@
 
 Welcome! This page contains all the necessary files and instructions to build this device. Please read through each section carefully! If you've found this page, you're seeking to build your own automated inflation device based on this design for inflation-style sensory and anxiety vests. My goal for designing this device was to automate the inflation and deflation cycles on my own [Squease Vest®](https://www.squeasewear.com/). My thanks to [@tahunus ](https://github.com/tahunus) for giving me the inspiration to continue the development of this project!
 
+## Please read through these hardware sections before considering a BOM.
+
+[3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-)<br>
+[Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-)<br>
+[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-)<br>
+[PCB](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#pcb)<br>
+[Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#electrical-components)<br>
+[Non-Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#non-electrical-components)<br>
+
+[0.3v FIRMWARE](https://github.com/MagicPhase/AutoInflate/blob/main/FIRMWARE/AUTOINFLATE_0.3V.ino)<br>
+
+
 **_Update 11/28/23: It appears that Squease will be relaunching soon! This is good news for those unable to get a vest prior to the company shutting down operations earlier this year. Yay!_**
 
 It was my intention to design this with a wide range of possible uses while also making it relatively safe given minimal instruction to the user. Here's an overview of some features.
@@ -91,24 +103,4 @@ Finally, it's time to assemble the finished unit. It's easier to disconnect the 
 * Lay both halves flat on a table and attach the ribbon cable. Each of the sockets has a bottom carriage that needs to be pulled out slightly before inserting the ribbon cable. The cable should be inserted all the way with the shiny metal pins facing up then evenly push the carriage into place. This is easy to mess up and have the cable seat slightly crooked. This needs to be perfectly straight to work correctly.<br> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/6f882d23-1637-44e1-a129-6622f7b7ddcc" width=35% height=35%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/d12dfce9-ebe2-45b3-b147-79432a8350c4" width=33% height=33%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/41725f9c-c93e-4803-b95f-0c729dd59055" width=31% height=31%><br>
 
 * Place the E-Stop button into the guide holes in the PCB. While keeping the BOTTOM case on the table, rotate the TOP half over and allow the ribbon cable to fold over itself. The two halves come together by inserting the single TOP screw mount into the BOTTOM case at an angle. Then pivoting down over the E-Stop button and aligning the remaining screw holes. It's important to remember the forwardmost screw mounts make a near-zero clearance between the PCB and TOP case. Because of this, it's necessary to slightly force the TOP case as it pivots onto the BOTTOM case. As the two halves come together, it's necessary to gently guide the E-Stop button into place under the casing so as to not be crushed or cause assembly issues. I've included a video showing how to disassemble and reassemble the device at this point. Watch this first! ---> https://www.youtube.com/watch?v=enySG7zAhLk<br> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/a72f96c3-1887-49ae-b029-8e8c705b945e" width=33% height=33%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/ecae9348-1409-4de7-ba5d-73956ac03185" width=33% height=33%><br>
-
-
-
-
-
-
-## Please read through these hardware sections before considering a BOM.
-
-[3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-)<br>
-[Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-)<br>
-[Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-)<br>
-[PCB](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#pcb)<br>
-[Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#electrical-components)<br>
-[Non-Electrical Components](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#non-electrical-components)<br>
-
-[0.3v FIRMWARE](https://github.com/MagicPhase/AutoInflate/blob/main/FIRMWARE/AUTOINFLATE_0.3V.ino)<br>
-
----
-
-
 
