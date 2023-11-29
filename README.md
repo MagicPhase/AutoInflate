@@ -28,7 +28,12 @@ It's advisable that you gain access or purchase the desired inflation garment fi
 
 **STEP TWO-**
 
-Determine what hardware is needed. You'll need to acquire the parts needed to craft your AutoInflate. Starting with the [3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-) section, go over the necessary 3D printable parts you'll need. You can use a print service such as [Shapeways](https://www.shapeways.com/) or any other printing service that's capable of reproducing the needed resin parts. I've included some helpful notes beside the parts to guide you in your decision-making. Please read carefully!
+Determine what hardware is needed. You'll need to acquire the parts needed to craft your AutoInflate. Go over these sections and start building your purchase list.
+* [3D Printed Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-3d-printed-parts-) Go over the necessary 3D printable parts you'll need. You can use a print service such as [Shapeways](https://www.shapeways.com/) or any other printing service that's capable of reproducing the needed resin parts. I've included some helpful notes beside the parts to guide you in your decision-making.
+* [Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-) Determine which pressure mainfoild you wish to use. I recommend using the parts listed for [MS583702BA01](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS583702BA01-50/6221400). I've not fully tested the MPS sensor variant! This is important because the two pressure sensor variations require different resin prints as well as sensor hardware. The MS583702BA01 sensor has the benefit of having a higher pressure limit but is also slightly more expensive. _Tinker note: there are I2C pads exposed so a completely different sensor could be used if the internal space allows for it!_
+* [Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-) Make a list of the various fasteners and metal parts needed.
+* 
+
 
 
 
