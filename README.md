@@ -22,7 +22,7 @@ Welcome! This page contains all the necessary files and instructions to build th
 
 It was my intention to design this with a wide range of possible uses while also making it relatively safe given minimal instruction to the user. Here's an overview of some features.
 * Handheld/Pocket Sized
-* Encoder Styel Input
+* Encoder Style Input
 * Emergency Stop Button
 * Configurable Pressure Limits
 * Adjustable Timed Cycles
