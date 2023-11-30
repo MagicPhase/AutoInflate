@@ -1,7 +1,7 @@
 # AutoInflate
 Custom-designed solution for inflation-style sensory and anxiety vests. 
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=60% height=60%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=31% height=31%><br>
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=62% height=62%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=33% height=33%><br>
 
 
 ###
@@ -35,11 +35,11 @@ While this device was created using the Squease Vest, this device could possibly
 
 **A note about safety!** Under proper working conditions using sanely determined pressure limits and times, this device can operate safely but also has the potential to restrict breathing! This is true for adults, **_but especially true for small children._** If you're unsure about how to safely assemble and operate this device, you should consider using the supplied method of inflation for your garment. To make this as safe as possible, I've implemented an E-Stop button on the front side that is a kill switch that removes power from the functional parts. Both the E-Stop and main power switch will effectively render the device unable to retain pressure using the "normally open" air solenoid.
 
-# _**STEP 1**_
+# _**STEP 1 - Vest**_
 
 It's advisable that you gain access or purchase the desired inflation garment first. This will be an important step to understanding the operation of the garment and the possible benefits of using an automated inflation device for such a garment. At the time of this writing, the Squease Vest® has been out of production for most of 2023. However, recent news says they might be starting up again! 
 
-# _**STEP 2**_
+# _**STEP 2 - Plan**_
 
 Determine what hardware is needed. You'll need to acquire the parts needed to craft your AutoInflate so go over these sections and start building your purchase list. As of this writing, building a single AutoInflate could cost between $200-300 depending on the availability and quantity of parts you buy. One significant cost will be the manufacturing of the unassembled PCB. 
 
@@ -56,7 +56,7 @@ And finally, the PCB.
 * [PCB](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#pcb) I've provided the appropriate Gerber files for a PCB manufacturing service. Both the main and display PCBs are together and separated during assembly. If you plan to DIY, I'd recommend ordering the solder stencil as well!
 * Follow the [BOM](https://github.com/MagicPhase/AutoInflate/blob/main/PCB/AutoInflate_V0.3_BOM.html) and build the appropriate list of SMD components. (Save to BOM.html and open in any browser.)
 
-# _**STEP 3**_
+# _**STEP 3 - Assemble**_
 
 Once you have all the parts and pieces, you can move to assembly and testing! 
 
