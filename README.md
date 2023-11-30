@@ -26,7 +26,7 @@ While this device was created using the Squease Vest, this device could possibly
 [STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate/tree/main#step-1---vest)<br>
 [STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate/tree/main#step-2---plan)<br>
 [STEP 3 - ASSEMBLE](https://github.com/MagicPhase/AutoInflate/tree/main#step-3---assemble)<br>
-[STEP 4 - SOFTWARE](https://github.com/MagicPhase/AutoInflate/tree/main#step-1---vest)<br>
+[STEP 4 - SOFTWARE](https://github.com/MagicPhase/AutoInflate#step-4---software)<br>
 
 ## Please read through these hardware sections before considering a BOM.
 
