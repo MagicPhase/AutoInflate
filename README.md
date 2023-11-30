@@ -72,11 +72,13 @@ These instructions assume you have moderate to advanced skills necessary to sold
 
 * Attach and solder the remaining components like the battery holder, pump (including shock mount), and solenoid. Also, check that the motor polarity is correct! Depending on the specific model of the solenoid, it may also have a polarity. If the solenoid shows no polarity, connect whichever way is convenient to the pads. Both pump and solenoid wires run from the backside to the front through holes in the PCB.
 * The shock mount foam piece should be thin open cell foam about 7cm x 2cm in size and no more than 5mm thick un-compressed. This is important so as to not overfill the cavity surrounding the pump motor. <br>
+* Please refer to [Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-) for the parts needed.<br>
 
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/db545554-be04-4ca9-bd24-52a667d76999">|<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/c1dd0864-fdca-4bbc-baa5-fa5d92ee4f9d">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/6ab3e3ae-5a2b-4aed-b844-f1a58ee93669">|<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/8460bb9c-c881-4056-a8d0-af55bef69ac7">|<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/dd0b27d0-129b-4678-b2b7-028943e41fa5">|
 | -- | -- | -- | -- | -- |
 
 * Prepare and attach the MS5873 sensor manifold. Don't forget the O-Ring! Refer to the exposed example of the assembly. Once done you can mark and cut the lengths of silicon tubing to connect the various parts. The larger is 1/8"(3mm) ID x 15mm in length and the smaller is 3/32"(2mm) ID x 9mm in length.<br>
+* Please refer to [Pressure Sensor Manifold Options](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-pressure-sensor-manifold-options-) for the parts needed.<br>
 
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3014fb26-5c44-4010-a361-f64866ffd94d" width=50% height=50%>|<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/4109db54-8074-45d3-ac42-e3ac96db2fec" width=75% height=75%>|
 | -- | -- |
@@ -101,6 +103,7 @@ The next step is to solder and assemble the display PCB. This is done in two par
 * The display board has components on both sides and may be tricky to solder. Because the encoder is a surface mount part, I'd recommend attaching that first because it requires a little extra heat. Once you have the display board soldered MINUS the OLED, connect the solder jumpers on the back side to match your OLED pin configuration. Specifically which pin is power and ground. This should be silk-screened on the device and you should jumper the correct pins to match.<br> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/4dbf8fae-762d-4f95-a8aa-9cb17509300a" width=28% height=28%><br>
 
 * Start by laying out the TOP case, OLED, and the display PCB. Set the OLED into the case, then arrange the PCB to fit with the screw holes visible. Make sure the pins from the OLED header pass through the appropriate holes. Screw the PCB in place with the M2 self-tapping screws. Make sure everything is secured and finally solder the 4 header pins. This will set the proper distance between the OLED and PCB. Note that the OLED is held in place by the pin header and the allowed seat internal to the case. You can now remove the PCB assembly by pivoting backward at the bottom. This will make it easier to attach the ribbon cable if you don't feel comfortable doing it inside the case.
+* Please refer to [Fasterns and Metal Parts](https://github.com/MagicPhase/AutoInflate/blob/main/Materials.md#-fasterns-and-metal-parts-) for the parts needed.<br>
 
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/4d037f0a-2162-4929-8f89-9fa24f9dd1ec">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/7c0de6b7-9fa5-41dd-b4a5-df86911d8b7e">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/a0327928-8bbd-4255-bc38-2ac00781973c">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/f813ba1b-7a43-4f20-b25f-382095396ddf">|
 | -- | -- | -- | -- |
