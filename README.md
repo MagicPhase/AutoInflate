@@ -161,11 +161,9 @@ The latest firmware can be found here. --> [FIRMWARE](https://github.com/MagicPh
 
 A note about programming the ESP32-S3 using the onboard USB to UART.
 
-Unfortunately, the onboard UART doesn't always play nice with the newest Arduino IDE. To program the ESP32 you need to hold down the encoder button and then power on. This shorts PIN 0 to ground putting it into program mode. Then plug in the USB and check for a COM port.
+To program the ESP32 you need to hold down the encoder button and then power on. This shorts PIN 0 to ground putting it into program mode. Then plug in the USB and check for a COM port.
 
-For some reason, the newer Arduino IDE picks a random hardware ID for the ESP32. It will probably show up as some flavor of S3, which it is, but the compiler profile needs to know that it's an "ESP32S3 Dev Module"! It will probably still compile and upload, but the random ESP32-S3 module profile usually doesn't have the correct settings or correct IO mapping. The latter issue caused me great headaches when I was playing around the first time. This also means when resetting after a flash, the device ID changes and you need to reselect it if you are monitoring for serial connection. 
-
-All my ESP32s act this way on the newer Arduino IDE so I assume it's not an isolated problem.<br>
+For some reason, the Arduino IDE picks a random hardware ID for the ESP32. It will probably show up as some flavor of S3, which it is, but the compiler profile needs to know that it's an "ESP32S3 Dev Module"! It will probably still compile and upload, but the random ESP32-S3 module profile usually doesn't have the correct settings or correct IO mapping. The latter issue caused me great headaches when I was programming for the first time. This also means when resetting after a flash, the device ID changes and you need to reselect it if you're monitoring for serial connection. All my ESP32s act this way on the newer Arduino IDE so I assume it's not an isolated problem.<br>
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/82ca0b5f-4822-4eee-8c4c-a8849fd30eb8" width=50% height=50%>
 
