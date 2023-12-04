@@ -382,18 +382,17 @@ void configPage8()//TEMP
           SAVE = true;//Set SAVE flag for button press trigger. (Special case)
       }
     }
-    
-    else
+    else //Now if changeValue is true, we are making changes to the specific element that was selected. Element == 0 goes back to the sub-config selection menu by default!
     {
       if(element == 1)//TEMP VARIABLE
       {
-        encoderConstrainValMin = 0;
-        encoderConstrainValMax = 255;
-        tempVar = encoderInput;//Sets the new variable value.
+        encoderConstrainValMin = 0; 
+        encoderConstrainValMax = 255;  //It's important to set a maximum encoder input value!
+        tempVar = encoderInput;        //Live update to variable.
       }
       else if(element == 2)//SAVE
       {
-         //BLANK. Save function is checked by setting SAVE = true and picked up in the 'subconfigPageActions()' function.
+         //BLANK. The save function is checked by setting 'SAVE = true' and picked up in the 'subconfigPageActions()' function.
       }
     }
 }
@@ -405,13 +404,13 @@ Fourth, add the temp global variable near the top of the code.
 byte tempVar = 0;
 ```
 
-Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two elements to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
+Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two elements to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The zeroth element is a back function by default in the sub-config menus. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
 
 ```
 int PageElements[11] = {0, 3, 8, 6, 4, 5, 0, 3, 0, 0, 2};
 ```
 
-Sixth, add the correct 'Preferences' entry to the 'storedData()' function to store in flash. In the 'storedData()' function, change the case 10 executing to this...
+Sixth, add the correct 'Preferences' entry to the 'storedData()' function to store in flash. In the 'storedData()' function, change the case 10 (page number 10) execution to this...
 
 ```
 case 10:
