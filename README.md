@@ -177,7 +177,7 @@ A description of the various menu items.
 
 **_Important note: All entered settings will be valid for the current powered cycle. If you wish the settings to remain during future uses, use the SAVE function on each specific subconfig menu!_**
 
-Main Page
+-Main Page-
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/93f09008-bf68-4455-a549-2ccc71daf2a6" width=50% height=50%>
 
@@ -197,13 +197,13 @@ Main Page
 
 * BATTERY - Shows the remaining battery life. The low mark is referenced to the low voltage cutoff IC voltage (U6).
 
-Config Page
+-Config Page-
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/1c7ffb62-7d6a-45d4-9810-b82f794b39f2" width=50% height=50%>
 
 * A simple menu for the selection of the various subconfiguration menus. At the time of this writing, not all menus are active.
 
-Hug and Profile Pages
+-Hug and Profile-
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/176b5bf6-48db-4448-8d70-f7f1fbfe6cff" width=50% height=50%>
 
@@ -227,15 +227,23 @@ Both the Hug and Profile menus are similar. The Hug settings are intended for on
 
 * SAVE - This function will save the current entered pressures and times within for future use if powered off.
 
-AIRSYS Menu
+-AIRSYS-
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/727538d3-dbf1-4e22-a5bb-180eb93175fb" width=50% height=50%>
 
 This page is important for proper function! Please adjust these settings based on personal therapeutic choices such as maximum allowed pressures and pump speeds.
 
 * Pump Max - This sets the maximum speed of the pump. For the maximum performance, the highest setting should be used. However, if the audible pump noise is an issue, you can reduce this speed to quiet the pump motor at the expense of a slower inflation time. Consideration should be given because the slower speed may fail to reach a target pressure within a given One Time cycle.
-  * Example: If the device is unable to inflate the vest's volume of air at a given On Time, try increasing the pump speed or increase the On Time to achieve the target pressure.
+  * Example: If the device is unable to inflate the vest's volume of air at a given "On Time", try increasing the pump speed or increase the On Time to achieve the target pressure within the On Time cycle.
+ 
+* P.Max - This sets the maximum allowed target pressure in both the Hug and Profile menus. (Note: The limit of this adjustment is hard coded.)
 
+* THRESH - This adjusts the threshold limit for the ramping function. This allows for a slow ramping of the pump motor at the top and bottom of the target pressure making for a quieter start and stop. Change to 0 if you don't want this function.
 
+* BACK - Use to navigate back to the subconfig selection menu.
+
+* HELP - An on-screen description of the various items.
+
+* SAVE - This function will save the current entered pressures and times within for future use if powered off.
 
 
