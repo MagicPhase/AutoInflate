@@ -335,22 +335,25 @@ Third, add a function for 'configPage8()' with the relevant data.
 ```
 void configPage8()//TEMP
 {
+  if(SAVE){SAVE = false;}
   //Initial page graphics.
   u8g2.setDrawColor(1);
-  u8g2.drawXBMP( 0, 57, 9, 7, image_Pin_arrow_left_9x7_bits); //Back arrow graphic.
+  u8g2.drawXBMP( 0, 57, 9, 7, image_Pin_arrow_left_9x7_bits);
+  u8g2.drawXBMP( 104, 53, 24, 11, image_KeySaveSelected_24x11_bits);
 
   u8g2.setFont(u8g2_font_profont22_tr);
   u8g2.drawStr(19, 35, "TEMP");
 
   char buf[5];
-  int temp = tempVar; //New temp variable.
-  dtostrf(temp, 3, 0, buf); //Using 'u8g2.drawStr()' may require 'dtostrf()'.
+  int temp = tempVar;
+  dtostrf(temp, 3, 0, buf);
+  
   u8g2.setFont(u8g2_font_profont22_tr);
   u8g2.drawStr(72, 35, buf);
-
-  if(!changeValue) //Check if we have selected a variable to change.
+  
+  if(!changeValue)
     {
-      if(encoderInput == 0) //BACK
+      if(encoderInput == 0)//BACK
       {
         if(!flash)
           {
@@ -358,7 +361,7 @@ void configPage8()//TEMP
             u8g2.drawBox(0, 57, 9, 7);
           }  
       }
-      else if(encoderInput == 1) //TEMP VARIABLE
+      else if(encoderInput == 1)//TEMP VARIABLE
       {
         encoderInputTemp = tempVar;
         if(!flash)
@@ -367,18 +370,44 @@ void configPage8()//TEMP
           u8g2.drawFrame(70, 19, 38, 18);
         }     
       }
+      else if(encoderInput == 2)//SAVE
+      {
+        if(!flash)
+          {
+            u8g2.setDrawColor(2);
+            u8g2.drawRBox(104, 53, 24, 11, 1);
+          }
+          SAVE = true;//Set SAVE flag for button press trigger. (Special case)
+      }
     }
-    else //If we are changing a variable...
+    else
     {
-      if(element == 1) //New temp variable at element = 1. Note: By default element = 0 goes back to the sub-config selection menu in the button press function!
+      if(element == 1)//TEMP VARIABLE
       {
         encoderConstrainValMin = 0;
-        encoderConstrainValMax = 255; //Important to set a maximum input value!
-        tempVar = encoderInput; //Live update based on encoder value.
+        encoderConstrainValMax = 255;
+        tempVar = encoderInput;//Sets the new variable value.
+      }
+      else if(element == 2)//SAVE
+      {
+         //BLANK. Save function is checked by setting SAVE = true and picked up in the 'subconfigPageActions()' function.
       }
     }
 }
 ```
+
+Forth, add the temp global variable near the top of the code.
+
+```
+byte tempVar = 0;
+```
+
+Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two element to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
+
+```
+int PageElements[11] = {0, 3, 8, 6, 4, 5, 0, 3, 0, 0, 2};
+```
+
 
 
 
