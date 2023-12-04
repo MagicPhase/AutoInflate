@@ -64,7 +64,7 @@ And finally, the PCB.
 
 Once you have all the parts and pieces, you can move to assembly and testing! 
 
-## _**STEP 3.1**_
+## _**STEP 3.1 - Main PCB**_
 
 These instructions assume you have moderate to advanced skills necessary to solder the surface mount parts. You can use the included interactive [BOM](https://github.com/MagicPhase/AutoInflate/blob/main/PCB/AutoInflate_V0.3_BOM.html) to guide you as you build the PCB. 
 
@@ -99,7 +99,7 @@ These instructions assume you have moderate to advanced skills necessary to sold
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/40657b6c-46bb-4787-9635-47b4df31da22" width=50% height=50%>|<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/4c060b4b-66da-4b51-beb0-ee1245ffff18">|
 | -- | -- |
 
-## _**STEP 3.2**_
+## _**STEP 3.2 - Display PCB**_
 
 The next step is to solder and assemble the display PCB. This is done in two parts.
 1. Solder the SMD parts using air hot like capacitors, resistors, ribbon cable socket, and encoder.
@@ -116,7 +116,7 @@ The next step is to solder and assemble the display PCB. This is done in two par
 
 
 
-## _**STEP 3.3**_
+## _**STEP 3.3 - First Power-Up**_
 
 All the components should be assembled for the first power-on test. On the bench, install the 18650 batteries and attach the ribbon cable between the two boards. Note that the device can't be used directly from USB power! The battery charger requires the batteries to be installed to work properly!
 
@@ -128,7 +128,7 @@ All the components should be assembled for the first power-on test. On the bench
 
 https://github.com/MagicPhase/AutoInflate/assets/104283546/334833f4-76d6-4969-865c-a28765c14681
 
-## _**STEP 3.4**_
+## _**STEP 3.4 - Final Assembly**_
 
 Finally, it's time to assemble the finished unit. It's easier to disconnect the ribbon cable from the main PCB and reattach it just prior to combining the two case halves. The 1/8" thru-bulk fitting should be attached to the bottom case as well as a final short piece of tubing that should be used to connect the sensor manifold to the thru-bulk port. 
 
@@ -171,7 +171,7 @@ Also, if you plan to use serial debug back over the USB, make sure you have the 
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/de414ec0-6143-4b71-8549-c25bcb629ff4" width=50% height=50%>
 
-## _**STEP 4.1**_
+## _**STEP 4.1 - UI Description**_
 
 A description of the various menu items.
 
@@ -246,7 +246,7 @@ This page is important for proper function! Please adjust these settings based o
 
 * SAVE - This function will save the current entered pressures and times within for future use if powered off.
 
-## _**STEP 4.2**_
+## _**STEP 4.2 - Code Explanation**_
 
 This section is to provide a brief description of the menu system in code. This may be helpful if you wish to add/modify the menus.
 
