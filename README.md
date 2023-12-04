@@ -30,10 +30,11 @@ While this device was created using the Squease Vest, this device could possibly
 * [STEP 3.2 - Display PCB](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-32---display-pcb)<br>
 * [STEP 3.3 - First Power-Up](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-33---first-power-up)<br>
 * [STEP 3.4 - Final Assembly](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-34---final-assembly)<br>
+
 [STEP 4 - SOFTWARE](https://github.com/MagicPhase/AutoInflate#step-4---software)<br>
 * [STEP 4.1 - UI Description](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-41---ui-description)<br>
-* STEP 4.2 - [Code Explanation](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-42---code-explanation)<br>
-* STEP 4.3 - [Modify The Menus](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-43---modify-the-menus)<br>
+* [STEP 4.2 - Code Explanation](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-42---code-explanation)<br>
+* [STEP 4.3 - Modify The Menus](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-43---modify-the-menus)<br>
 
 ## Please read through these hardware sections before considering a BOM.
 
