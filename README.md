@@ -1,7 +1,7 @@
 # AutoInflate
 Custom-designed solution for inflation-style sensory and anxiety vests. 
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=62% height=62%> <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=33% height=33%><br>
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=62% height=62%><br>
 
 
 ###
@@ -24,6 +24,8 @@ While this device was created using the Squease Vest, this device could possibly
 ## ⚠ A note about safety! Under proper working conditions using sanely determined pressure limits and times, this device can operate safely but also has the potential to restrict breathing! This is true for adults, _but especially true for small children._ If you're unsure about how to safely assemble and operate this device, you should consider using the supplied method of inflation for your garment. To make this as safe as possible, I've implemented an E-Stop button on the front side that is a kill switch that removes power from the functional parts. Both the E-Stop and main power switch will effectively render the device unable to retain pressure using the "normally open" air solenoid.
 
 ## ⚠ Important note: While the AutoInflate does have safety features like reverse protection and is fused, the charger IC (U1) BQ25886 does not have a 2-cell balance function! This means you should take extra care when choosing and installing the 18650 batteries. Ensure they are both of the same make and model battery. You should also try to match their respective internal resistance to ensure they discharge and recharge evenly, but most importantly to ensure they are at the same level of charge when you install them! If you are unsure about their level of charge, place both cells in an external charger and charge them both together before installation. Once you have two "matched" and charged 18650 batteries then you can safely install them. They will discharge and recharge at the same rate and ensure safe operation by the charger IC.
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=33% height=33%><br>
 
 [STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate#step-1---vest)<br>
 [STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate#step-2---plan)<br>
