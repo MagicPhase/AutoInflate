@@ -256,6 +256,19 @@ Displayed data on the various pages is handled with the 'displayData()' function
 
 Both the encoder and button are handled with interrupt functions. While the button function is an interrupt, it's also debounced and checked on each loop. A button action happens using a combination of page number, element, and encoder value. This happens when the page number is passed to 'buttonPressFunc(pageNumber)' and is a one-time action that changes the continuously displayed data.
 
+Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages.
+
+## Main Page Block
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/fdb699e6-e894-469f-84da-ad4f88864c3c" width=50% height=50%>
+
+## Sub-Config Selection Page Block
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3d0c9501-63c1-4ade-9d37-2f540ad5ac11" width=50% height=50%>
+
+## Sub-Config Pages (PROFILE, HUG, etc...)
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/948c5688-2afe-4d4a-9bcc-d327a8608e7d" width=50% height=50%>
 
 
 
