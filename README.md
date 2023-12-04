@@ -225,12 +225,16 @@ Both the Hug and Profile menus are similar. The Hug settings are intended for on
 
 * HELP - An on-screen description of the various items.
 
-* SAVE - This function will save the current entered pressure and times within the current menu for future use if powered off.
+* SAVE - This function will save the current entered pressures and times within for future use if powered off.
 
+AIRSYS Menu
 
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/727538d3-dbf1-4e22-a5bb-180eb93175fb" width=50% height=50%>
 
+This page is important for proper function! Please adjust these settings based on personal therapeutic choices such as maximum allowed pressures and pump speeds.
 
-
+* Pump Max - This sets the maximum speed of the pump. For the maximum performance, the highest setting should be used. However, if the audible pump noise is an issue, you can reduce this speed to quiet the pump motor at the expense of a slower inflation time. Consideration should be given because the slower speed may fail to reach a target pressure within a given One Time cycle.
+  * Example: If the device is unable to inflate the vest's volume of air at a given On Time, try increasing the pump speed or increase the On Time to achieve the target pressure.
 
 
 
