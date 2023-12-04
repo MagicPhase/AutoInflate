@@ -405,7 +405,7 @@ Fourth, add the temp global variable near the top of the code.
 byte tempVar = 0;
 ```
 
-Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two element to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
+Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two elements to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
 
 ```
 int PageElements[11] = {0, 3, 8, 6, 4, 5, 0, 3, 0, 0, 2};
