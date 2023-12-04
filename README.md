@@ -247,7 +247,7 @@ Both the Hug and Profile menus are similar. The Hug settings are intended for on
 
 This page is important for proper function! Please adjust these settings based on personal therapeutic choices such as maximum allowed pressures and pump speeds.
 
-* Pump Max - This sets the maximum speed of the pump. For the maximum performance, the highest setting should be used. However, if the audible pump noise is an issue, you can reduce this speed to quiet the pump motor at the expense of a slower inflation time. Consideration should be given because the slower speed may fail to reach a target pressure within a given One Time cycle.
+* Pump Max - This sets the maximum speed of the pump. For the maximum performance, the highest setting should be used. However, if the audible pump noise is an issue, you can reduce this speed to quiet the pump motor at the expense of a slower inflation time. Consideration should be given because the slower speed may fail to reach a target pressure within a given On Time cycle.
   * Example: If the device is unable to inflate the vest's volume of air at a given "On Time", try increasing the pump speed or increase the On Time to achieve the target pressure within the On Time cycle.
  
 * P.Max - This sets the maximum allowed target pressure in both the Hug and Profile menus. (Note: The limit of this adjustment is hard coded.)
