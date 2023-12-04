@@ -144,7 +144,7 @@ Finally, it's time to assemble the finished unit. It's easier to disconnect the 
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/6f882d23-1637-44e1-a129-6622f7b7ddcc">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/d12dfce9-ebe2-45b3-b147-79432a8350c4">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/41725f9c-c93e-4803-b95f-0c729dd59055">|
 | -- | -- | -- |
 
-* Place the E-Stop button into the guide holes in the PCB. While keeping the BOTTOM case on the table, rotate the TOP half over and allow the ribbon cable to fold over itself. The two halves come together by inserting the single TOP screw mount into the BOTTOM case at an angle. Then pivoting down over the E-Stop button and aligning the remaining screw holes. It's important to remember the forwardmost screw mounts make a near-zero clearance between the PCB and TOP case. Because of this, it's necessary to slightly force the TOP case as it pivots onto the BOTTOM case. As the two halves come together, it's necessary to gently guide the E-Stop button into place under the casing so as to not be crushed or cause assembly issues. I've included a video showing how to disassemble and reassemble the device at this point. Watch this first! ---> https://www.youtube.com/watch?v=enySG7zAhLk<br>
+* Place the E-Stop button into the guide holes in the PCB. While keeping the BOTTOM case on the table, rotate the TOP half over and allow the ribbon cable to fold over itself. The two halves come together by inserting the single TOP screw mount into the BOTTOM case at an angle. Then pivoting down over the E-Stop button and aligning the remaining screw holes. It's important to remember the forwardmost screw mounts make a near-zero clearance between the PCB and TOP case. Because of this, it's necessary to slightly force the TOP case as it pivots onto the BOTTOM case. As the two halves come together, it's necessary to gently guide the E-Stop button into place under the casing to not be crushed or cause assembly issues. I've included a video showing how to disassemble and reassemble the device at this point. Watch this first! ---> https://www.youtube.com/watch?v=enySG7zAhLk<br>
 
 
 |<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/a72f96c3-1887-49ae-b029-8e8c705b945e">| <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/38d43a9d-3154-4933-9dab-6c85e75d42fc">
@@ -170,6 +170,45 @@ For some reason, the Arduino IDE picks a random hardware ID for the ESP32. It wi
 Also, if you plan to use serial debug back over the USB, make sure you have the "USB CDC" option enabled on your first flash otherwise no traffic.<br>
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/de414ec0-6143-4b71-8549-c25bcb629ff4" width=50% height=50%>
+
+## _**STEP 4.1**_
+
+A description of the various menu items.
+
+Main Page
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/93f09008-bf68-4455-a549-2ccc71daf2a6" width=50% height=50%>
+
+* Current Pressure - Disaplys the current pressure of the system in PSI (pound per square inch).
+
+* STOP - This function will stop all current cycles and turn off the pump and solenoid.
+
+* HUG - This function is intended for a one-time inflation cycle. These settings can be changed and saved in the CONFIG menu.
+
+* PROFILE - This function is for multiple cycles within a total cycle duration time. These settings can be changed and saved in the CONFIG menu.
+
+* CONFIG - This accesses the main subconfigure selection menu.
+
+* ACTIVITY - This will animate whenever a cycle is running regardless if there's any current activity from the pump.
+
+* TIME REMAINING - This counter shows the current remaining time until the active cycle stops.
+
+* BATTERY - Shows the remaining battery life. The low mark is referenced to the low voltage cutoff IC voltage (U6).
+
+Config Page
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/1c7ffb62-7d6a-45d4-9810-b82f794b39f2" width=50% height=50%>
+
+* A simple menu for the selection of the various subconfiguration menus. At the time of this writing, not all menus are active.
+
+Hug and Profile Pages
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/176b5bf6-48db-4448-8d70-f7f1fbfe6cff" width=50% height=50%>
+
+
+
+
+
 
 
 
