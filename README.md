@@ -270,7 +270,7 @@ The specific sub-config page elements are selected and changed in real-time base
 
 Here's an example of adding an element to the last config page of the current code (0.3v 12-4-23).
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/897c17e8-75cc-40e1-9b27-17ddd219bd67" width=50% height=50%>
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3aa35449-d6b4-4b3c-a7fe-5e7879633292" width=50% height=50%>
 
 First, change the displayed title of the 8th config page from "----------" to "TEMP" in the following section of 'void configMainPage()'.
 
