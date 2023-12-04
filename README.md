@@ -264,7 +264,7 @@ Displayed data on the various pages is handled with the 'displayData()' function
 
 Both the encoder and button are handled with interrupt functions. While the button function is an interrupt, it's also debounced and checked on each loop. A button action happens using a combination of page number, element, and encoder value. This happens when the page number is passed to 'buttonPressFunc(pageNumber)' and is a one-time action that changes the continuously displayed data.
 
-Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages. Also, it's important to remember these charts are generalized and don't contain the total of executed functions during a button press!! 
+Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages. Also, it's important to remember these charts are generalized and don't contain the total of executed functions during a button press but can be a useful guide for the order of execution! 
 
 ## Main Page Block
 
