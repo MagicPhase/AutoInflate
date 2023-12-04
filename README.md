@@ -272,7 +272,29 @@ Here's an example of adding an element to the last config page of the current co
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/897c17e8-75cc-40e1-9b27-17ddd219bd67" width=50% height=50%>
 
-First, add a 10th case to the 'displayData()' function below case 7. This will be the looping display data for the 8th config page 'configPage8()' which is 'pageNumber10'.
+First, change the displayed title of the 8th config page from "----------" to "TEMP" in the following section of 'void configMainPage()'.
+
+```
+else if(encoderInput == 8)//PAGE 8 NA
+  {
+    u8g2.setDrawColor(1);
+    u8g2.setFont(u8g2_font_profont22_tr);
+    //u8g2.drawStr(11, 32, "---------"); //<--From this.
+    u8g2.drawStr(11, 32, "TEMP");        //<--To this.
+
+    if(!flash)
+    {
+      u8g2.setDrawColor(1);
+      u8g2.drawFrame(89, 54, 10, 10);
+    }
+    else
+    {
+      u8g2.drawBox(101, 54, 10, 10);
+    }
+  }
+```
+
+Second, add a 10th case to the 'displayData()' function below case 7. This will be the looping display data for the 8th config page 'configPage8()' which is 'pageNumber = 10'.
 ```
 void displayData()//CONTINUOUS EXECUTE
 {
@@ -307,11 +329,54 @@ void displayData()//CONTINUOUS EXECUTE
   }
 }
 ```
-Second, add a function for 'configPage8()' with the relevant data.
-```
-void configPage8()
-{
 
+Third, add a function for 'configPage8()' with the relevant data.
+
+```
+void configPage8()//TEMP
+{
+  //Initial page graphics.
+  u8g2.setDrawColor(1);
+  u8g2.drawXBMP( 0, 57, 9, 7, image_Pin_arrow_left_9x7_bits); //Back arrow graphic.
+
+  u8g2.setFont(u8g2_font_profont22_tr);
+  u8g2.drawStr(19, 35, "TEMP");
+
+  char buf[5];
+  int temp = tempVar; //New temp variable.
+  dtostrf(temp, 3, 0, buf); //Using 'u8g2.drawStr()' may require 'dtostrf()'.
+  u8g2.setFont(u8g2_font_profont22_tr);
+  u8g2.drawStr(72, 35, buf);
+
+  if(!changeValue) //Check if we have selected a variable to change.
+    {
+      if(encoderInput == 0) //BACK
+      {
+        if(!flash)
+          {
+            u8g2.setDrawColor(0);
+            u8g2.drawBox(0, 57, 9, 7);
+          }  
+      }
+      else if(encoderInput == 1) //TEMP VARIABLE
+      {
+        encoderInputTemp = tempVar;
+        if(!flash)
+        {
+          u8g2.setDrawColor(1);
+          u8g2.drawFrame(70, 19, 38, 18);
+        }     
+      }
+    }
+    else //If we are changing a variable...
+    {
+      if(element == 1) //New temp variable at element = 1. Note: By default element = 0 goes back to the sub-config selection menu in the button press function!
+      {
+        encoderConstrainValMin = 0;
+        encoderConstrainValMax = 255; //Important to set a maximum input value!
+        tempVar = encoderInput; //Live update based on encoder value.
+      }
+    }
 }
 ```
 
