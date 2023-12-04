@@ -25,8 +25,6 @@ While this device was created using the Squease Vest, this device could possibly
 
 ## ⚠ Important note: While the AutoInflate does have safety features like reverse protection and is fused, the charger IC (U1) BQ25886 does not have a 2-cell balance function! This means you should take extra care when choosing and installing the 18650 batteries. Ensure they are both of the same make and model battery. You should also try to match their respective internal resistance to ensure they discharge and recharge evenly, but most importantly to ensure they are at the same level of charge when you install them! If you are unsure about their level of charge, place both cells in an external charger and charge them both together before installation. Once you have two "matched" and charged 18650 batteries then you can safely install them. They will discharge and recharge at the same rate and ensure safe operation by the charger IC.
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=33% height=33%><br>
-
 [STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate#step-1---vest)<br>
 [STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate#step-2---plan)<br>
 [STEP 3 - ASSEMBLE](https://github.com/MagicPhase/AutoInflate#step-3---assemble)<br>
@@ -56,6 +54,8 @@ While this device was created using the Squease Vest, this device could possibly
 It's advisable that you gain access or purchase the desired inflation garment first. This will be an important step to understanding the operation of the garment and the possible benefits of using an automated inflation device for such a garment. At the time of this writing, the Squease Vest® has been out of production for most of 2023. However, recent news says they might be starting up again! 
 
 # _**STEP 2 - Plan**_
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/2182380c-eeda-44b5-bb03-4274c5618d0f" width=50% height=50%><br>
 
 Determine what hardware is needed. You'll need to acquire the parts needed to craft your AutoInflate so go over these sections and start building your purchase list. As of this writing, building a single AutoInflate could cost between $200-300 depending on the availability and quantity of parts you buy. One significant cost will be the manufacturing of the unassembled PCB. 
 
