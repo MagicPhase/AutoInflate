@@ -256,17 +256,19 @@ This page is important for proper function! Please adjust these settings based o
 
 ## _**STEP 4.2 - Code Explanation**_
 
-This section is to provide a brief description of the menu system in code. This may be helpful if you wish to add/modify the menus.
+This section is to provide a brief description of the menu system in code. This may be helpful if you wish to add or modify the menus.
 
-It's important to remember this menu system is based on a one-button interface with the encoder and that all stored and displayed values are derived from the ENCODER INPUT VALUE! The code keeps track of the current page and element number based on the encoder value and whether the button was pressed on a specific element. The "main" and "sub-config" selection pages have specific/special action functions that are different from the individual sub-config pages which are more generalized. 
+It's important to remember this menu system is based on a one-button interface with the encoder and that all stored and displayed values are derived from the ENCODER INPUT VALUE! This was a design choice based on my limited knowledge of coding in general and my need to keep things relatively easy to adjust with only the encoder as an input device. This meant jumping through some hoops to achieve this. For example, all pressures and stored and computed as (millibar * 100), but the displayed and adjustable values are all in 0.1 PSI increments for ease of use. This means the stored value in (millibar * 100) is computed bidirectionally from the displayed PSI in 0.1 increments from the encoder input and also recalled from memory as (millibar * 0.0146) both computed and displayed as a whole number which is the encoder input value. This gives around 6.8 millibar resolution which is more than enough for this application. Furthermore, variables like the pump PWM are also derived from the encoder input but are further divided by the number of pixels in the graphic representing the pump speed. In this case, the pump speed is mapped to the number of pixels on the display graph which gives 51 levels of adjustment. This mapping can be removed with the pump PWM reflecting the exact encoder input, but the resolution is 10 bit giving 1024 levels. 10 bit was chosen for greater control over low PWM values in the 'airSYSLOOP()' function.
 
-Displayed data on the various pages is handled with the 'displayData()' function in 'void loop()' which loads the data to display based on the current page number and results in a continuous page update of that data. Each page function contains the relevant data to display such as graphics and variables as well as things like cursor positions and specific variable constrain limits. 
+The code keeps track of the current page and element number based on the encoder value and whether the button was pressed on a specific element. The "main" and "sub-config" selection pages have specific/special action functions that are different from the individual sub-config pages which are more generalized. 
+
+Displayed data on the various pages is handled with the 'displayData()' function in 'void loop()' which loads the data to display based on the current page number and results in a continuous page update of that data. Each specific page function contains the relevant data to display such as graphics and variables as well as things like cursor positions and specific variable constrain limits. 
 
 Both the encoder and button are handled with interrupt functions. While the button function is an interrupt, it's also debounced and checked on each loop. A button action happens using a combination of page number, element, and encoder value. This happens when the page number is passed to 'buttonPressFunc(pageNumber)' and is a one-time action that changes the continuously displayed data.
 
-Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages. Also, it's important to remember these charts are generalized and don't contain the total of executed functions during a button press but can be a useful guide for the order of execution! 
+Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the more generalized sub-config pages themselves. Also, it's important to remember these charts are generalized and don't contain the total of executed functions during a button press but can be a useful guide for the order of execution! 
 
-## Main Page Block
+## Main and Config Page Blocks
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/fdb699e6-e894-469f-84da-ad4f88864c3c" width=50% height=50%>
 
