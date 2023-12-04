@@ -252,9 +252,9 @@ This section is to provide a brief description of the menu system in code. This 
 
 It's important to remember this menu system is based on a one-button interface with the encoder. The code keeps track of the current page and element number based on the encoder value and whether the button was pressed on a specific element. The "main" and "sub-config" selection pages have specific/special action functions that are different from the individual sub-config pages which are more generalized. 
 
+Displayed data on the various pages is handled with the 'displayData()' function in 'void loop()' which loads the data to display based on the current page number and results in a continuous page update of that data. Each page function contains the relevant data to display such as graphics and variables as well as things like cursor positions and specific variable constrain limits. 
 
-
-
+Both the encoder and button are handled with interrupt functions. While the button function is an interrupt, it's also debounced and checked on each loop. A button action happens using a combination of page number, element, and encoder value. This happens when the page number is passed to 'buttonPressFunc(pageNumber)' and is a one-time action that changes the continuously displayed data.
 
 
 
