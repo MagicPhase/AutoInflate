@@ -1,7 +1,7 @@
 # AutoInflate
 Custom-designed solution for inflation-style sensory and anxiety vests. 
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=62% height=62%><br>
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=80% height=80%><br>
 
 
 ###
