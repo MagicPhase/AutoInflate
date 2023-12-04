@@ -262,10 +262,6 @@ Here are a few flowcharts that describe how data is displayed. Remember both the
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/fdb699e6-e894-469f-84da-ad4f88864c3c" width=50% height=50%>
 
-## Sub-Config Selection Page Block
-
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3d0c9501-63c1-4ade-9d37-2f540ad5ac11" width=50% height=50%>
-
 ## Sub-Config Pages (PROFILE, HUG, etc...)
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/948c5688-2afe-4d4a-9bcc-d327a8608e7d" width=50% height=50%>
