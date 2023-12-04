@@ -268,6 +268,8 @@ Here are a few flowcharts that describe how data is displayed. Remember both the
 
 The specific sub-config page elements are selected and changed in real-time based on the element number and whether 'changeValue' is true or not.
 
+## _**STEP 4.3 - Modify The Menus**_
+
 Here's an example of adding an element to the last config page of the current code (0.3v 12-4-23).
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3aa35449-d6b4-4b3c-a7fe-5e7879633292" width=50% height=50%>
