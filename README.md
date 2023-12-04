@@ -336,14 +336,16 @@ Third, add a function for 'configPage8()' with the relevant data.
 void configPage8()//TEMP
 {
   if(SAVE){SAVE = false;}
-  //Initial page graphics.
-  u8g2.setDrawColor(1);
-  u8g2.drawXBMP( 0, 57, 9, 7, image_Pin_arrow_left_9x7_bits);
-  u8g2.drawXBMP( 104, 53, 24, 11, image_KeySaveSelected_24x11_bits);
 
+  //Initial page graphics.
+
+  u8g2.setDrawColor(1);
+  u8g2.drawXBMP( 0, 57, 9, 7, image_Pin_arrow_left_9x7_bits);        //Back button.
+  u8g2.drawXBMP( 104, 53, 24, 11, image_KeySaveSelected_24x11_bits); //SAVE button.
   u8g2.setFont(u8g2_font_profont22_tr);
   u8g2.drawStr(19, 35, "TEMP");
 
+  //Using the 'u8g2.drawStr()' may require the use of 'dtostrf()' to disaply data.
   char buf[5];
   int temp = tempVar;
   dtostrf(temp, 3, 0, buf);
@@ -351,7 +353,7 @@ void configPage8()//TEMP
   u8g2.setFont(u8g2_font_profont22_tr);
   u8g2.drawStr(72, 35, buf);
   
-  if(!changeValue)
+  if(!changeValue) //Check if we're changing a selected value.
     {
       if(encoderInput == 0)//BACK
       {
@@ -361,7 +363,7 @@ void configPage8()//TEMP
             u8g2.drawBox(0, 57, 9, 7);
           }  
       }
-      else if(encoderInput == 1)//TEMP VARIABLE
+      else if(encoderInput == 1)//New Temp Variable
       {
         encoderInputTemp = tempVar;
         if(!flash)
@@ -380,6 +382,7 @@ void configPage8()//TEMP
           SAVE = true;//Set SAVE flag for button press trigger. (Special case)
       }
     }
+    
     else
     {
       if(element == 1)//TEMP VARIABLE
@@ -396,7 +399,7 @@ void configPage8()//TEMP
 }
 ```
 
-Forth, add the temp global variable near the top of the code.
+Fourth, add the temp global variable near the top of the code.
 
 ```
 byte tempVar = 0;
@@ -408,7 +411,26 @@ Fifth, add the number of elements of the new temp page to constrain the encoder 
 int PageElements[11] = {0, 3, 8, 6, 4, 5, 0, 3, 0, 0, 2};
 ```
 
+Sixth, add the correct 'Preferences' entry to the 'storedData()' function to store in flash. In the 'storedData()' function, change the case 10 executing to this...
 
+```
+case 10:
+ if(!RW) //READ
+ {
+  tempVar = preferences.getUInt("temp_Var", 0); //Check if tempVar is present, if not set default value '0'.
+ }
+ else //WRITE
+ {
+  preferences.putUInt("temp_Var", tempVar); //Write tempVar to flash at 'temp_Var' namespace in Preferences ESP32 storage function.
+ }
+ break;
+```
+
+Seventh, add a function to pull stored value from flash on power up in 'void setup()'.
+
+```
+storedData(10, 0); //Page number 10, '0' for read.
+```
 
 
 
