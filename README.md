@@ -346,12 +346,12 @@ void displayData()//CONTINUOUS EXECUTE
 }
 ```
 
-Third, add a function for 'configPage8()' with the relevant data.
+Third, add a function 'void configPage8()' with the relevant data.
 
 ```
 void configPage8()//TEMP
 {
-  if(SAVE){SAVE = false;}
+  if(SAVE){SAVE = false;} //Important! Because the save function is picked up in the button handle portion instead of on each sub-config menu, this function forces the execution when the encoder input is equal to the element number for the save function only!
 
   //Initial page graphics.
 
@@ -368,6 +368,8 @@ void configPage8()//TEMP
   
   u8g2.setFont(u8g2_font_profont22_tr);
   u8g2.drawStr(72, 35, buf);
+
+  //Alter the displayed data or variables based on encoder input and element.
   
   if(!changeValue) //Check if we're changing a selected value.
     {
