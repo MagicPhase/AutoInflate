@@ -23,18 +23,18 @@ While this device was created using the Squease Vest, this device could possibly
 
 **⚠ A note about safety!** Under proper working conditions using sanely determined pressure limits and times, this device can operate safely but also has the potential to restrict breathing! This is true for adults, **_but especially true for small children._** If you're unsure about how to safely assemble and operate this device, you should consider using the supplied method of inflation for your garment. To make this as safe as possible, I've implemented an E-Stop button on the front side that is a kill switch that removes power from the functional parts. Both the E-Stop and main power switch will effectively render the device unable to retain pressure using the "normally open" air solenoid.
 
-[STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate/tree/main#step-1---vest)<br>
-[STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate/tree/main#step-2---plan)<br>
-[STEP 3 - ASSEMBLE](https://github.com/MagicPhase/AutoInflate/tree/main#step-3---assemble)<br>
-* [STEP 3.1 - Main PCB](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-31---main-pcb)<br>
-* [STEP 3.2 - Display PCB](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-32---display-pcb)<br>
-* [STEP 3.3 - First Power-Up](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-33---first-power-up)<br>
-* [STEP 3.4 - Final Assembly](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-34---final-assembly)<br>
+[STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate#step-1---vest)<br>
+[STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate#step-2---plan)<br>
+[STEP 3 - ASSEMBLE](https://github.com/MagicPhase/AutoInflate#step-3---assemble)<br>
+* [STEP 3.1 - Main PCB](https://github.com/MagicPhase/AutoInflate#step-31---main-pcb)<br>
+* [STEP 3.2 - Display PCB](https://github.com/MagicPhase/AutoInflate#step-32---display-pcb)<br>
+* [STEP 3.3 - First Power-Up](https://github.com/MagicPhase/AutoInflate#step-33---first-power-up)<br>
+* [STEP 3.4 - Final Assembly](https://github.com/MagicPhase/AutoInflate#step-34---final-assembly)<br>
 
 [STEP 4 - SOFTWARE](https://github.com/MagicPhase/AutoInflate#step-4---software)<br>
-* [STEP 4.1 - UI Description](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-41---ui-description)<br>
-* [STEP 4.2 - Code Explanation](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-42---code-explanation)<br>
-* [STEP 4.3 - Modify The Menus](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-43---modify-the-menus)<br>
+* [STEP 4.1 - UI Description](https://github.com/MagicPhase/AutoInflate#step-41---ui-description)<br>
+* [STEP 4.2 - Code Explanation](https://github.com/MagicPhase/AutoInflate#step-42---code-explanation)<br>
+* [STEP 4.3 - Modify The Menus](https://github.com/MagicPhase/AutoInflate#step-43---modify-the-menus)<br>
 
 ## Please read through these hardware sections before considering a BOM.
 
