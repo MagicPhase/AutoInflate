@@ -256,7 +256,7 @@ Displayed data on the various pages is handled with the 'displayData()' function
 
 Both the encoder and button are handled with interrupt functions. While the button function is an interrupt, it's also debounced and checked on each loop. A button action happens using a combination of page number, element, and encoder value. This happens when the page number is passed to 'buttonPressFunc(pageNumber)' and is a one-time action that changes the continuously displayed data.
 
-Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages.
+Here are a few flowcharts that describe how data is displayed. Remember both the first two pages, Main and Sub-Config Selection pages have different action functions than the specific sub-config pages. Also, it's important to remember these charts are generalized and don't contain the total of executed functions during a button press!! 
 
 ## Main Page Block
 
@@ -266,6 +266,54 @@ Here are a few flowcharts that describe how data is displayed. Remember both the
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/948c5688-2afe-4d4a-9bcc-d327a8608e7d" width=50% height=50%>
 
+The specific sub-config page elements are selected and changed in real-time based on the element number and whether 'changeValue' is true or not.
+
+Here's an example of adding an element to the last config page of the current code (0.3v 12-4-23).
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/897c17e8-75cc-40e1-9b27-17ddd219bd67" width=50% height=50%>
+
+First, add a 10th case to the 'displayData()' function below case 7. This will be the looping display data for the 8th config page 'configPage8()' which is 'pageNumber10'.
+```
+void displayData()//CONTINUOUS EXECUTE
+{
+  switch (pageNumber)
+  {
+    case 1:
+      mainPage(); //MAIN PAGE
+      break;
+    case 2:
+      configMainPage(); //CONFIG PAGE
+      break;
+    case 3:
+      configPage1(); //PROFILE
+      break;
+    case 4:
+      configPage2(); //HUG
+      break;
+    case 5:
+      configPage3(); //AIRSYS
+      break;
+    case 6:
+      configPage4(); //MOTION
+      break;
+    case 7:
+      configPage5(); //CONFIG
+      break;
+    case 10:
+      configPage8(); //<---NEW TEMP PAGE!!
+      break;
+    default:
+      break;
+  }
+}
+```
+Second, add a function for 'configPage8()' with the relevant data.
+```
+void configPage8()
+{
+
+}
+```
 
 
 
