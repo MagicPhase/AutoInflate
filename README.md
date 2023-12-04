@@ -205,7 +205,15 @@ Hug and Profile Pages
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/176b5bf6-48db-4448-8d70-f7f1fbfe6cff" width=50% height=50%>
 
+Both the Hug and Profile menus are similar. The Hug settings are intended for one-time inflation cycles while the Profile is meant for multiple cycles based on a total cycle time.
 
+* Target Pressure - The desired target pressure to maintain during an on cycle.
+
+* On Time - The amount of time to maintain the target pressure before reverting to a zero pressure state within the cycle time.
+
+* Off Time - The amount of time for the system to remain at zero pressure before re-inflating within the cycle time.
+
+* Cycle Time - 
 
 
 
