@@ -175,6 +175,8 @@ Also, if you plan to use serial debug back over the USB, make sure you have the 
 
 A description of the various menu items.
 
+**_Important note: All entered settings will be valid for the current powered cycle. If you wish the settings to remain during future uses, use the SAVE function on each specific subconfig menu!_**
+
 Main Page
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/93f09008-bf68-4455-a549-2ccc71daf2a6" width=50% height=50%>
@@ -205,7 +207,9 @@ Hug and Profile Pages
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/176b5bf6-48db-4448-8d70-f7f1fbfe6cff" width=50% height=50%>
 
-Both the Hug and Profile menus are similar. The Hug settings are intended for one-time inflation cycles while the Profile is meant for multiple cycles based on a total cycle time.
+Both the Hug and Profile menus are similar. The Hug settings are intended for one-time inflation cycles while the Profile is meant for multiple cycles based on a total cycle time.<br>
+
+**_Important note: Neither the Hug or Profile cycles will run if the On Time and Cycle Time are zero!_**
 
 * Target Pressure - The desired target pressure to maintain during an on cycle.
 
@@ -213,9 +217,15 @@ Both the Hug and Profile menus are similar. The Hug settings are intended for on
 
 * Off Time - The amount of time for the system to remain at zero pressure before re-inflating within the cycle time.
 
-* Cycle Time - 
+* Cycle Time - The hard time limit for multiple inflation cycles. This time limit will allow for multiple on/off times within this limit, but will not be divided evenly. 
+  * Example 1: On Time = 40 seconds, Off Time = 20 seconds, Cycle Time = 5 minutes (5:00). There will be a total of 5 on/off cycles within the 5 minutes.
+  * Example 2: On Time = 30 seconds, Off Time = 60 seconds, Cycle Time = 9 minutes and 20 seconds (9:20). There will be a total of 6 on/off cycles with a remaining 20 seconds of on time before the cycle limit is reached and stops the run.
 
+* BACK - Use to navigate back to the subconfig selection menu.
 
+* HELP - An on-screen description of the various items.
+
+* SAVE - This function will save the current entered pressure and times within the current menu for future use if powered off.
 
 
 
