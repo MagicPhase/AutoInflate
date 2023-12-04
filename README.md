@@ -195,7 +195,7 @@ A description of the various menu items.
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/93f09008-bf68-4455-a549-2ccc71daf2a6" width=50% height=50%>
 
-* Current Pressure - Disaplys the current pressure of the system in PSI (pound per square inch).
+* Current Pressure - Displays the current pressure of the system in PSI (pound per square inch).
 
 * STOP - This function will stop all current cycles and turn off the pump and solenoid.
 
