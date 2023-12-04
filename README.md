@@ -177,7 +177,7 @@ A description of the various menu items.
 
 **_Important note: All entered settings will be valid for the current powered cycle. If you wish the settings to remain during future uses, use the SAVE function on each specific subconfig menu!_**
 
--Main Page-
+### Main Page
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/93f09008-bf68-4455-a549-2ccc71daf2a6" width=50% height=50%>
 
@@ -197,13 +197,13 @@ A description of the various menu items.
 
 * BATTERY - Shows the remaining battery life. The low mark is referenced to the low voltage cutoff IC voltage (U6).
 
--Config Page-
+### Config Page
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/1c7ffb62-7d6a-45d4-9810-b82f794b39f2" width=50% height=50%>
 
 * A simple menu for the selection of the various subconfiguration menus. At the time of this writing, not all menus are active.
 
--Hug and Profile-
+### Hug and Profile
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/176b5bf6-48db-4448-8d70-f7f1fbfe6cff" width=50% height=50%>
 
@@ -227,7 +227,7 @@ Both the Hug and Profile menus are similar. The Hug settings are intended for on
 
 * SAVE - This function will save the current entered pressures and times within for future use if powered off.
 
--AIRSYS-
+### AIRSYS
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/727538d3-dbf1-4e22-a5bb-180eb93175fb" width=50% height=50%>
 
@@ -245,5 +245,23 @@ This page is important for proper function! Please adjust these settings based o
 * HELP - An on-screen description of the various items.
 
 * SAVE - This function will save the current entered pressures and times within for future use if powered off.
+
+## _**STEP 4.2**_
+
+This section is to provide a brief description of the menu system in code. This may be helpful if you wish to add/modify the menus.
+
+It's important to remember this menu system is based on a one-button interface with the encoder. The code keeps track of the current page and element number based on the encoder value and whether the button was pressed on a specific element. The "main" and "sub-config" selection pages have specific/special action functions that are different from the individual sub-config pages which are more generalized. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
