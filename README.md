@@ -274,7 +274,7 @@ Here are a few flowcharts that describe how data is displayed. Remember both the
 
 ## Sub-Config Pages (PROFILE, HUG, etc...)
 
-<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/948c5688-2afe-4d4a-9bcc-d327a8608e7d" width=50% height=50%>
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/879dcbaa-481e-4506-abf2-1a2558d48308" width=50% height=50%>
 
 The specific sub-config page elements are selected and changed in real-time based on the element number and whether 'changeValue' is true or not.
 
