@@ -33,7 +33,7 @@ While this device was created using the Squease Vest, this device could possibly
 [STEP 4 - SOFTWARE](https://github.com/MagicPhase/AutoInflate#step-4---software)<br>
 * [STEP 4.1 - UI Description](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-41---ui-description)<br>
 * STEP 4.2 - [Code Explanation](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-42---code-explanation)<br>
-* STEP 4.3 - 
+* STEP 4.3 - [Modify The Menus](https://github.com/MagicPhase/AutoInflate/blob/main/README.md#step-43---modify-the-menus)<br>
 
 ## Please read through these hardware sections before considering a BOM.
 
