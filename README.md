@@ -391,7 +391,7 @@ void configPage8()//TEMP
             u8g2.setDrawColor(2);
             u8g2.drawRBox(104, 53, 24, 11, 1);
           }
-          SAVE = true;//Set SAVE flag for button press trigger. (Special case)
+          SAVE = true;//Set SAVE flag for button press trigger when the save icon is highlighted. (Special case)
       }
     }
     else //Now if changeValue is true, we are making changes to the specific element that was selected. Element == 0 goes back to the sub-config selection menu by default!
@@ -404,7 +404,7 @@ void configPage8()//TEMP
       }
       else if(element == 2)//SAVE
       {
-         //BLANK. The save function is checked by setting 'SAVE = true' and picked up in the 'subconfigPageActions()' function.
+         //LEAVE BLANK. The save function is checked by setting 'SAVE = true' above and picked up in the 'subconfigPageActions()' function.
       }
     }
 }
