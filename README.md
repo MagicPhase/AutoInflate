@@ -286,7 +286,7 @@ The specific sub-config page elements are selected and changed in real-time base
 
 ## _**STEP 4.3 - Modify The Menus**_
 
-Here's an example of adding an element to the last config page which is currently empty (0.3v).
+Here's an example of changing and adding elements to the last config page which is currently empty (0.3v). This is the last config page 'configPage8()' and the 10th page in the system 'pageNumber = 10'. We will change the onscreen title from "----------" to "TEMP". We will then add a new onscreen variable "TEMP" with a selectable range from 0-255 and include the 'Preferences' entry to store the variable in flash. Also included will be the default onscreen back and save buttons. This well result on 3 total elements for 'configPage8()'. (0, Back) (1, TEMP) (2, SAVE) The zeroth element goes back to the sub-config selection menu by default in the button handle function. This zeroth element only needs the onscreen graphical elements in each specific sub-config page.<br>
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3aa35449-d6b4-4b3c-a7fe-5e7879633292" width=50% height=50%>
 
@@ -303,7 +303,7 @@ else if(encoderInput == 8)//PAGE 8 NA
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
     //u8g2.drawStr(11, 32, "---------"); //<--From this.
-    u8g2.drawStr(11, 32, "TEMP");        //<--To this.
+    u8g2.drawStr(39, 32, "TEMP");        //<--To this.
 
     if(!flash)
     {
