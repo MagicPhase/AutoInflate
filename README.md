@@ -295,7 +295,7 @@ Nearly all the graphics for this project were generated using [lopaka.app](https
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/55ba0c48-19b4-4a9e-afb1-c7fc1af28a3f" width=33% height=33%>
 
 
-First, change the displayed title of the 8th config page from "----------" to "TEMP" in the following section of 'void configMainPage()'.
+* First, change the displayed title of the 8th config page from "----------" to "TEMP" in the following section of 'void configMainPage()'.<br>
 
 ```
 else if(encoderInput == 8)//PAGE 8 NA
@@ -317,7 +317,8 @@ else if(encoderInput == 8)//PAGE 8 NA
   }
 ```
 
-Second, add a 10th case to the 'displayData()' function below case 7. This will be the looping display data for the 8th config page 'configPage8()' which is 'pageNumber = 10'.
+* Second, add a 10th case to the 'displayData()' function below case 7. This will be the looping display data for the 8th config page 'configPage8()' which is 'pageNumber = 10'.<br>
+
 ```
 void displayData()//CONTINUOUS EXECUTE
 {
@@ -353,7 +354,7 @@ void displayData()//CONTINUOUS EXECUTE
 }
 ```
 
-Third, add a function 'void configPage8()' with the relevant data.
+* Third, add a function 'void configPage8()' with the relevant data.<br>
 
 ```
 void configPage8()//TEMP
@@ -423,19 +424,19 @@ void configPage8()//TEMP
 }
 ```
 
-Fourth, add the temp global variable near the top of the code.
+* Fourth, add the temp global variable near the top of the code.<br>
 
 ```
 byte tempVar = 0;
 ```
 
-Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two elements to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The zeroth element is a back function by default in the sub-config menus. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).
+* Fifth, add the number of elements of the new temp page to constrain the encoder behavior. We are adding only two elements to this page so we change the 11th position of 'PageElements[11]' from 0 to 2. The zeroth element is a back function by default in the sub-config menus. The page order is as follows: BLANK, MainPage, ConfigPage, Profile, Hug, AirSYS, Motion, Config, WIFI, -----, (NEW TEMP PAGE).<br>
 
 ```
 int PageElements[11] = {0, 3, 8, 6, 4, 5, 0, 3, 0, 0, 2};
 ```
 
-Sixth, add the correct 'Preferences' entry to the 'storedData()' function to store in flash. In the 'storedData()' function, change the case 10 (page number 10) execution to this...
+* Sixth, add the correct 'Preferences' entry to the 'storedData()' function to store in flash. In the 'storedData()' function, change the case 10 (page number 10) execution to this...<br>
 
 ```
 case 10:
@@ -450,7 +451,7 @@ case 10:
  break;
 ```
 
-Seventh, add a function to pull stored value from flash on power up in 'void setup()'.
+* Seventh, add a function to pull stored value from flash on power up in 'void setup()'.<br>
 
 ```
 storedData(10, 0); //Page number 10, '0' for read.
