@@ -290,6 +290,11 @@ Here's an example of adding an element to the last config page which is currentl
 
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/3aa35449-d6b4-4b3c-a7fe-5e7879633292" width=50% height=50%>
 
+Nearly all the graphics for this project were generated using [lopaka.app](https://lopaka.app/) using the U8g2 generator. This webapp has greatly reduced the time for generating the graphical elements!
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/55ba0c48-19b4-4a9e-afb1-c7fc1af28a3f" width=33% height=33%>
+
+
 First, change the displayed title of the 8th config page from "----------" to "TEMP" in the following section of 'void configMainPage()'.
 
 ```
