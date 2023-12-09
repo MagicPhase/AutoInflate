@@ -25,6 +25,11 @@ While this device was created using the Squease Vest, this device could possibly
 
 ### ⚠ Important note: While the AutoInflate does have safety features like reverse protection and is fused, the charger IC (U1) BQ25886 does not have a 2-cell balance function! This means you should take extra care when choosing and installing the 18650 batteries. Ensure they are both of the same make and model battery. You should also try to match their respective internal resistance to ensure they discharge and recharge evenly, but most importantly to ensure they are at the same level of charge when you install them! If you are unsure about their level of charge, place both cells in an external charger and charge them both together before installation. Once you have two "matched" and charged 18650 batteries then you can safely install them. They will discharge and recharge at the same rate and ensure safe operation by the charger IC.
 
+### It's also important to note that the 18650 holders internally are sized for "flat top" cells and not "button top". The button top cells are too long and will not fit! Please check you're using the correct size 18650 flat-top cells. 
+
+<img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/277a6e6c-3275-457f-ac22-381c4c6b562a" width=33% height=33%><br>
+
+
 [STEP 1 - VEST](https://github.com/MagicPhase/AutoInflate#step-1---vest)<br>
 [STEP 2 - PLAN](https://github.com/MagicPhase/AutoInflate#step-2---plan)<br>
 [STEP 3 - ASSEMBLE](https://github.com/MagicPhase/AutoInflate#step-3---assemble)<br>
