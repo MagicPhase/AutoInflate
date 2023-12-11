@@ -462,7 +462,7 @@ void mainPage()
   int runningSec = 0;
   
   tempTimerSecs = timerReadSeconds(timer1);
-  constrain(tempTimerSecs, 0, 5999);
+  tempTimerSecs = constrain(tempTimerSecs, 0, 5999);
   runningMin = (tempTimerSecs / 60) % 60;
   runningSec = tempTimerSecs % 60;
   
