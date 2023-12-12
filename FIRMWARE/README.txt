@@ -32,11 +32,12 @@ P.MAX value in the interface.
 Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. The preference function initiates these defaults.
 
 Important interface notes:
-Inputting pressures over the selected maximum will reduce the value to the maximum. An inflation task "hug or profile" will only execute if the times are not zero!
-The values under all menus except CONFIG are usable for the current power cycle. The SAVE function will store the values for future use. Changing the CONFIG menu
-items requires a reset to take effect. This is forced in the CONFIG navigation.
+* Inputting pressures over the selected maximum will reduce the value to the maximum. 
+* An inflation task "hug or profile" will only execute if the times are not zero!
+* The values under all menus except CONFIG are usable for the current power cycle. The SAVE function will store the values for future use. 
+* Changing the CONFIG menu items requires a reset to take effect. This is forced in the CONFIG navigation.
 
 Operation notes:
-The noise level of the pump can be tuned by changing the maximum PWM in the AIRSYS menu. The threshold ramping value can also be adjusted to allow for a softer start/stop
-that can make the pump quieter during topping maintenance.
-Motor pulses for system feedback. (One) pulse for system functions such as the save function or failure to set a variable. (Two) pulses single the end of an inflation task.
+* The noise level of the pump can be tuned by changing the maximum PWM in the AIRSYS menu. The threshold ramping value can also be adjusted to allow for a softer start/stop
+  that can make the pump quieter during the initial start and topping maintenance.
+* Motor pulses for system feedback. (One) pulse for system functions such as the save function or failure to set a variable. (Two) pulses single the end of an inflation task.
