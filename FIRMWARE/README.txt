@@ -15,16 +15,17 @@ BY Tevian Busselle
 
 All variables including pressures, settings, and times are converted from the (encoderInput) counter. This has the effect of limiting the divisions of certain
 variables like pressure and pump speeds. For instance, while the pump PWM has a value from 0-1023, this would require the encoder to be turned too many times
-to achieve the max value. The division of the PWM speed is dictated by the number of pixels in the display graph. This is handled via the map function to
+to achieve the maximum value. The division of the PWM speed is dictated by the number of pixels in the display graph. This is handled via the map function to
 convert 0-1023 steps into 51 pixel steps. The raw PWM number is stored for use while the displayed value/graph is converted from that stored number. 
 
 While the displayed pressures are in PSI, the stored pressure values are in (mBar * 100). Example: The default stored value for the maximum "selectable" 
-pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). The ABSOLUTE MAXIMUM SYSTEM PRESSURE is set by limiting the 
-encoder input via the (MaxPressure) variable while in the AIRSYS menu.
+pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). 
 
-Example: MaxPressure = 41 is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576.
+When uploading the firmware it's important to remember there is a hard-coded maximum system pressure. In the code, this variable sets the maximum encoder input value allowed when adjusting the maximum pressure in the AIRSYS menu. This variable is called (MaxPressure). Example: MaxPressure = 41(default) is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576. 
 
-Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. These defaults are initiated by the preference function.
+When the selectable pressure is reduced, all stored pressures in the different run scenarios are also reduced to match this. So, while the P.MAX adjustment in the AIRSYS menu sets the maximum user-selectable pressure for the different run scenarios, the hard-coded variable (MaxPressure) sets that maximum value for the adjustable P.MAX value in the interface.
+
+Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. The preference function initiates these defaults.
 
 Important interface notes:
 Inputting pressures over the selected maximum will reduce the value to the maximum. An inflation task "hug or profile" will only execute if the times are not zero!
