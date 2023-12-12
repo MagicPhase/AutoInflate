@@ -21,9 +21,13 @@ convert 0-1023 steps into 51 pixel steps. The raw PWM number is stored for use w
 While the displayed pressures are in PSI, the stored pressure values are in (mBar * 100). Example: The default stored value for the maximum "selectable" 
 pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). 
 
-When uploading the firmware it's important to remember there is a hard-coded maximum system pressure. In the code, this variable sets the maximum encoder input value allowed when adjusting the maximum pressure in the AIRSYS menu. This variable is called (MaxPressure). Example: MaxPressure = 41(default) is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576. 
+When uploading the firmware it's important to remember there is a hard-coded maximum system pressure. In the code, this variable sets the maximum encoder input 
+value allowed when adjusting the maximum pressure in the AIRSYS menu. This variable is called (MaxPressure). 
+Example: MaxPressure = 41(default) is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576. 
 
-When the selectable pressure is reduced, all stored pressures in the different run scenarios are also reduced to match this. So, while the P.MAX adjustment in the AIRSYS menu sets the maximum user-selectable pressure for the different run scenarios, the hard-coded variable (MaxPressure) sets that maximum value for the adjustable P.MAX value in the interface.
+When the selectable pressure is reduced, all stored pressures in the different run scenarios are also reduced to match this. So, while the P.MAX adjustment in the 
+AIRSYS menu sets the maximum user-selectable pressure for the different run scenarios, the hard-coded variable (MaxPressure) sets that maximum value for the adjustable 
+P.MAX value in the interface.
 
 Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. The preference function initiates these defaults.
 
