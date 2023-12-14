@@ -1,41 +1,105 @@
-#include <Arduino.h>
-#include <U8g2lib.h>
-#include <MS5837.h>
-//#include "HX710B.h"
-#include <Wire.h>
-#include <Adafruit_NeoPixel.h>
-#include <Preferences.h>
 /*
-AUTOINFLATE V0.3 - 11/18/23
+AUTOINFLATE V0.3.1 - 11/18/23
 BY Tevian Busselle 
+
+MIT License
+
+Copyright (c) 2023 Tevian Busselle
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+/////////
+
+Important interface notes:
+* Inputting pressures over the selected maximum will reduce the value to the maximum. 
+* An inflation task "hug or profile" will only execute if the times are not zero!
+* The values under all menus except CONFIG are usable for the current power cycle. The SAVE function will store the values for future use. 
+* Changing the CONFIG menu items requires a reset to take effect. This is forced in the CONFIG navigation.
+
+Operation notes:
+* The pump's noise level can be tuned by changing the maximum PWM in the AIRSYS menu. The threshold ramping value can also be adjusted to allow for a softer start/stop
+  that can make the pump quieter during the initial start and topping maintenance.
+* Motor pulses for system feedback. (One) pulse for system functions such as the save function or failure to set a variable. (Two) pulses single the end of an inflation task.
+* the threshold ramping pressure works by ramping the pump speed from a low minimum to a high speed across a small pressure window at the beginning and end of an inflation cycle.
+  This means the pump speed will remain low until the pressure sensor sees an increase in pressure. Depending on the volume of air required to inflate the vest or vessel,
+  this can result in an extended duration of low pump output at the beginning of the inflation cycle. If this happens, try decreasing the threshold amount, increasing the pump speed,
+  ensuring the total volume of air in the vest or vessel is reduced (adjusting the fit), or setting the threshold number to 0 which disables this feature.
+  
+---------------------------------------
+Choosing the correct pressure is important! Correct pressure is a matter of personal choice 
+based on your therapeutic needs. While I can't give a specific pressure and time duration, 
+I can give a few useful guides. Don't forget to 'SAVE' the settings if you find something you like for future use!
+
+Example Hug setting: 
+This will provide a rather quick and sudden sense of pressure on the torso for 30 seconds or more if needed. 
+Adjust the pressure as needed!
+
+  Hug Menu
+    Pressure: 1.0-1.5
+    Time: 0:30-1:00
+  CONFIG Menu
+    Pump PWM: 100%
+    T.MAX: 0.0-0.2  
+
+Example Profile setting: 
+These settings will give a gentle continuous rise and fall of pressure. 
+This can be very relaxing or decompress from anxiety or stress.
+
+  Profile Menu
+    Pressure: 1.0
+    On-Time: 0:45-1:00
+    Off-Time: 1:00-2:00
+    Cycle Time: 10:00-15:00
+  CONFIG Menu
+    Pump PWM: 60-75% (This will make the pump quieter) 
+    T.MAX: 0.3-0.4 (This will result in a softer start/stop)
+
+
+Notes about the code:
 
 All variables including pressures, settings, and times are converted from the (encoderInput) counter. This has the effect of limiting the divisions of certain
 variables like pressure and pump speeds. For instance, while the pump PWM has a value from 0-1023, this would require the encoder to be turned too many times
-to achieve the max value. The division of the PWM speed is dictated by the number of pixels in the display graph. This is handled via the map function to
+to achieve the maximum value. The division of the PWM speed is dictated by the number of pixels in the display graph. This is handled via the map function to
 convert 0-1023 steps into 51 pixel steps. The raw PWM number is stored for use while the displayed value/graph is converted from that stored number. 
 
 While the displayed pressures are in PSI, the stored pressure values are in (mBar * 100). Example: The default stored value for the maximum "selectable" 
-pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). The ABSOLUTE MAXIMUM SYSTEM PRESSURE is set by limiting the 
-encoder input via the (MaxPressure) variable while in the AIRSYS menu.
+pressure from the interface is (13788 / 100 = 2PSI) and is stored in (airSys.maxPressure). 
 
-Example: MaxPressure = 41 is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576.
+When uploading the firmware it's important to remember there is a hard-coded maximum system pressure. In the code, this variable sets the maximum encoder input 
+value allowed when adjusting the maximum pressure in the AIRSYS menu. This variable is called (MaxPressure). 
+Example: MaxPressure = 41 is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576. 
+
+When the selectable pressure is reduced, all stored pressures in the different run scenarios are also reduced to match this. So, while the P.MAX adjustment in the 
+AIRSYS menu sets the maximum user-selectable pressure for the different run scenarios, the hard-coded variable (MaxPressure) sets that maximum value for the adjustable 
+P.MAX value in the interface.
+
+Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. The preference function initiates these defaults.
 */
 
-byte MaxPressure = 41;//This number should remain low! Somewhere around 30 for 3PSI for safety!
+#include <Arduino.h>
+#include <U8g2lib.h>
+#include <MS5837.h>
+#include <Wire.h>
+#include <Adafruit_NeoPixel.h>
+#include <Preferences.h>
 
-/*
-Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. These defaults are initiated by the preference function.
-
-Important interface notes:
-Inputting pressures over the selected maximum will reduce the value to the maximum. An inflation task "hug or profile" will only execute if the times are not zero!
-The values under all menus except CONFIG are usable for the current power cycle. The SAVE function will store the values for future use. Changing the CONFIG menu
-items requires a reset to take effect. This is forced in the CONFIG navigation.
-
-Operation notes:
-The noise level of the pump can be tuned by changing the maximum PWM in the AIRSYS menu. The threshold ramping value can also be adjusted to allow for a softer start/stop
-that can make the pump quieter during topping maintenance.
-Motor pulses for system feedback. (One) pulse for system functions such as the save function or failure to set a variable. (Two) pulses single the end of an inflation task.
-*/
+byte MaxPressure = 30; //This number should remain low! Somewhere around 30 for 3PSI for safety!
 
 //PINS
 const int encoderPinA = 7;  // Encoder pin A
@@ -288,7 +352,7 @@ void setup(void)
       readings[thisReading] = 0;
     }
   
-  for (int i = 0; i <= 50; i++) //FUNCTION TO SET INITIAL PRESSURE OFFSET!
+  for (int i = 0; i <= 50; i++) 
   {
     airSys.PRESSUREmbar = sensor.pressure();
     u8g2.clearBuffer();
@@ -306,7 +370,7 @@ void setup(void)
     delay(100);
     sensor.read();
   }
-  airSys.pressureOffset = airSys.PRESSUREmbar * 100;
+  airSys.pressureOffset = airSys.PRESSUREmbar * 100; //FUNCTION TO SET INITIAL PRESSURE OFFSET!
   
   attachInterrupt(digitalPinToInterrupt(encoderPinA), handleEncoderInterrupt, CHANGE);
   attachInterrupt(digitalPinToInterrupt(buttonPin), [] {if (ButtonPressed+= (millis() - DebounceTimer) >= (delayTime )) DebounceTimer = millis();}, FALLING);
@@ -322,13 +386,13 @@ void loop(void)
 {
   currentMillis = millis();
   
-  if (ButtonPressed > 0)//ENCODER BUTTON PRESS DEBOUNCE
+  if (ButtonPressed > 0) //ENCODER BUTTON PRESS DEBOUNCE
   {
     handleButtonPress();
     ButtonPressed = 0;
   }
   
-  if(currentMillis - selectorPreviousMillis >= selectorInterval)//GENERAL TIMED DELAY
+  if(currentMillis - selectorPreviousMillis >= selectorInterval) //GENERAL TIMED DELAY
   {
     if(!flash)
     {
@@ -343,10 +407,10 @@ void loop(void)
   }
 
   //MAIN DISPLAY LOOP
-  u8g2.clearBuffer();//BEGIN FRAME
+  u8g2.clearBuffer(); //BEGIN FRAME
   u8g2.setBitmapMode(1);
   displayData();
-  u8g2.sendBuffer();//END FRAME
+  u8g2.sendBuffer(); //END FRAME
   
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(0, 0, encoderInput));
@@ -400,7 +464,7 @@ void airSYSLOOP()
     digitalWrite(solenoidPin, LOW);
   }
 
-  if(pulseFeedback > 0)//Feedback pulses from pump.
+  if(pulseFeedback > 0) //Feedback pulses from pump.
   {
     delay(100);
     pixels.clear();
@@ -485,7 +549,7 @@ void mainPage()
   u8g2.drawBox(119, 39, 7, tempPowerLevel); //BATTERY LEVEL INDECATOR
 
   //ACTIVE RUNNING TYPE
-  if(airSys.runType == 1)//PROFILE
+  if(airSys.runType == 1) //PROFILE
   {
     u8g2.setDrawColor(1);
     if(!flash)
@@ -499,7 +563,7 @@ void mainPage()
       u8g2.drawBox(94, 19, 14, 7);
     }
   }
-  else if(airSys.runType == 2)//HUG
+  else if(airSys.runType == 2) //HUG
   {
     u8g2.setDrawColor(1);
     if(!flash)
@@ -514,22 +578,22 @@ void mainPage()
     }
   }
 
-  if(encoderInput == 0)//STOP
+  if(encoderInput == 0) //STOP
     {
       u8g2.setDrawColor(1);
       u8g2.drawXBMP(55, 19, 14, 7, image_selectArrowOpen_bits);
     }
-    else if(encoderInput == 1)//HUG
+    else if(encoderInput == 1) //HUG
     {
       u8g2.setDrawColor(1);
       u8g2.drawXBMP(75, 19, 14, 7, image_selectArrowOpen_bits);
     }
-    else if(encoderInput == 2)//PROFILE
+    else if(encoderInput == 2) //PROFILE
     {
       u8g2.setDrawColor(1);
       u8g2.drawXBMP(94, 19, 14, 7, image_selectArrowOpen_bits);
     }
-    else if(encoderInput == 3)//CONFIG
+    else if(encoderInput == 3) //CONFIG
     {
       u8g2.setDrawColor(1);
       u8g2.drawXBMP(112, 19, 14, 7, image_selectArrowOpen_bits);
@@ -549,7 +613,7 @@ void configMainPage()
   u8g2.drawFrame(89, 54, 10, 10);
   u8g2.drawFrame(101, 54, 10, 10);
 
-  if(encoderInput == 0)//BACK
+  if(encoderInput == 0) //BACK
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -567,7 +631,7 @@ void configMainPage()
       }    
   }
 
-  else if(encoderInput == 1)//PAGE 1 PROFILE
+  else if(encoderInput == 1) //PAGE 1 PROFILE
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -585,7 +649,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 2)//PAGE 2 HUG
+  else if(encoderInput == 2) //PAGE 2 HUG
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -603,7 +667,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 3)//PAGE 3 AIRSYS
+  else if(encoderInput == 3) //PAGE 3 AIRSYS
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -621,7 +685,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 4)//PAGE 4 MOTION
+  else if(encoderInput == 4) //PAGE 4 MOTION
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -639,7 +703,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 5)//PAGE 5 CONFIG
+  else if(encoderInput == 5) //PAGE 5 CONFIG
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -657,7 +721,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 6)//PAGE 6 WIFI
+  else if(encoderInput == 6) //PAGE 6 WIFI
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -675,7 +739,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 7)//PAGE 7 NA
+  else if(encoderInput == 7) //PAGE 7 NA
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -692,7 +756,7 @@ void configMainPage()
     }
   }
 
-  else if(encoderInput == 8)//PAGE 8 NA
+  else if(encoderInput == 8) //PAGE 8 NA
   {
     u8g2.setDrawColor(1);
     u8g2.setFont(u8g2_font_profont22_tr);
@@ -710,7 +774,7 @@ void configMainPage()
   }
 }
 
-void configPage1()//PROFILE
+void configPage1() //PROFILE
 {
   if(SAVE){SAVE = false;}
   
