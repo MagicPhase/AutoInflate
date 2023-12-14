@@ -1,6 +1,6 @@
 This ino file must be compiled and uploaded using the Arduino IDE with all relevant ESP32 libraries.
 
-This version (0.3v) only has the MS5837 pressure sensor enabled, and will not work with the MPS sensor yet. This also requires the MS5837 library found here. https://github.com/bluerobotics/BlueRobotics_MS5837_Library
+This version (0.3v) only has the MS5837 pressure sensor enabled, and will not work with the MPS sensor yet. This also requires the MS5837 library found here. https://github.com/bluerobotics/BlueRobotics_MS5837_Library Copyright (c) 2015 BlueRobotics
 
 What works:
 All basic functions like timed inflation cycles work. This includes a one-time cycle "HUG" and a repeating timed cycle "PROFILE". 
