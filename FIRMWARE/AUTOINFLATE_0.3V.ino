@@ -20,7 +20,9 @@ encoder input via the (MaxPressure) variable while in the AIRSYS menu.
 
 Example: MaxPressure = 41 is 4.1PSI (encoderInput / 10). If the "selectable" pressure is also 4.1PSI then the stored value in (airSys.maxPressure) would be 27576.
 */
+
 byte MaxPressure = 41;//This number should remain low! Somewhere around 30 for 3PSI for safety!
+
 /*
 Default system variables like pressures and PWM are stored in "storedData" function with the relevant variables. These defaults are initiated by the preference function.
 
