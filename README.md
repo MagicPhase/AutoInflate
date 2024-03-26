@@ -1,6 +1,8 @@
 # AutoInflate
 Custom-designed solution for inflation-style sensory and anxiety vests. 
 
+**_In memory of Pedro Martin Colea 1/24/24. His initial interest and motivation to create a refined version of my old prototype made this project possible. I'm grateful for the opportunity to have stepped outside my comfort zone and bring this project to fruition. Thank you, Pedro._** 
+
 <img src="https://github.com/MagicPhase/AutoInflate/assets/104283546/65a4d1e6-a91f-4fd5-a99b-7d0dce51ac94" width=100% height=100%><br>
 
 
